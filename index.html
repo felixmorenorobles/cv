@@ -27,7 +27,7 @@
             --text-color: #333333;
             --accent-gold: #ae9066; 
             --light-gray: #f8f9fa;
-            --text-muted: #888; /* Color para texto atenuado (Intereses) */
+            --text-muted: #888; 
         }
 
         /* --- RESET Y BASE --- */
@@ -40,7 +40,7 @@
         html { 
             height: 100%; 
         }
-        
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #ececec;
@@ -50,38 +50,35 @@
             min-height: 100%;
         }
 
-        /* --- LAYOUT DEL CV --- */
+        /* --- LAYOUT DEL CV (ESCRITORIO) --- */
         .resume-container {
             display: grid;
             grid-template-columns: 280px 1fr;
             max-width: 1000px;
             margin: 40px auto;
-            /* CAMBIO CLAVE: Usa background para dibujar el color negro en la primera columna */
-            background: var(--main-bg); /* Fondo blanco por defecto */
+            /* Usa background para dibujar el color negro en la primera columna */
+            background: var(--main-bg); 
             background-image: linear-gradient(to right, var(--sidebar-bg) 280px, var(--main-bg) 280px);
-            background-repeat: repeat-y; /* Permite que el color se extienda a lo largo del eje Y */
-            /* background: var(--main-bg);  <-- ESTO DEBE SER REEMPLAZADO */
+            background-repeat: repeat-y; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             min-height: 1200px;
         }
 
         /* --- SIDEBAR (IZQUIERDA) --- */
         .sidebar {
-            /* ELIMINA: background-color: var(--sidebar-bg); */
             color: var(--sidebar-text);
             padding: 30px 25px;
             display: flex;
             flex-direction: column;
             gap: 35px;
-            /* Asegura que el contenido sea visible sobre el nuevo fondo */
             position: relative; 
             z-index: 2;
         }
 
         /* Foto de perfil */
         .profile-photo {
-            width: 170px; /* Tamaño ajustado para foto */
-            height: 170px; /* Tamaño ajustado para foto */
+            width: 170px;
+            height: 170px;
             background-color: #333;
             border-radius: 50%;
             margin: 0 auto;
@@ -137,7 +134,7 @@
         .education-item { margin-bottom: 15px; }
         .education-degree { color: #fff; font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 3px; }
         .education-school { font-size: 0.8rem; color: #999; }
-        
+
         /* Estilos de skills (personales) */
         .skills-list { list-style: none; padding: 0; }
         .skills-list li {
@@ -210,7 +207,7 @@
         .summary-stats {
             display: grid; 
             grid-template-columns: repeat(3, 1fr);
-            gap: 5px; /* Ajuste sutil del gap */
+            gap: 5px;
             margin-bottom: 5px; 
             margin-top: 0px;
             text-align: center;
@@ -220,12 +217,12 @@
 
         .summary-stats span {
             display: block;
-            font-size: 1.0rem; /* Hacemos el texto más grande */
-            font-weight: 700; /* Negrita */
-            color: var(--accent-gold); /* Usamos el color de acento */
+            font-size: 1.0rem; 
+            font-weight: 700; 
+            color: var(--accent-gold); 
             line-height: 1.2;
-            padding: 5px 0; /* Un poco de padding para que respire */
-            text-transform: uppercase; /* Para mayor impacto */
+            padding: 5px 0; 
+            text-transform: uppercase; 
         }
 
         .summary-text {
@@ -333,13 +330,13 @@
                 box-shadow: none;
                 width: 100%;
                 max-width: 100%;
-                grid-template-columns: 260px 1fr; /* Columna ajustada para impresión */
-                min-height: auto !important; /* Permite que crezca sin limitación de viewport */
+                grid-template-columns: 260px 1fr; 
+                min-height: auto !important; 
                 height: auto; 
                 display: grid; 
                 
                 /* CLAVE PARA LA IMPRESIÓN MULTIPÁGINA: Dibuja el fondo de la primera columna */
-                background-image: linear-gradient(to right, #232321 260px, #ffffff 260px); /* Usa valores fijos para asegurar la impresión */
+                background-image: linear-gradient(to right, #232321 260px, #ffffff 260px); 
                 background-repeat: repeat-y;
                 
                 /* Asegura que los colores se impriman (necesario para el fondo) */
@@ -368,16 +365,123 @@
             .sidebar { padding: 30px 20px; }
         }
 
-        /* RESPONSIVE (solo para visualización web en móviles) */
+        /* --- RESPONSIVE: Versión móvil con nombre primero y en negro --- */
         @media screen and (max-width: 768px) {
-            .resume-container { grid-template-columns: 1fr; margin: 0; width: 100%; box-shadow: none; }
-            .sidebar { padding: 20px; }
-            .main-content { padding: 20px; }
-            .skills-and-tech-grid { grid-template-columns: 1fr; gap: 30px; } 
-            .cert-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 2rem; }
-            .job-title { font-size: 1rem; }
+
+            /* Ahora usamos flex y reordenamos */
+            .resume-container {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                width: 100%;
+                box-shadow: none;
+
+                /* Quitamos el degradado de dos columnas en móvil */
+                background: var(--main-bg);
+                background-image: none;
+                min-height: auto;
+            }
+
+            /* El MAIN (con el header) pasa a ser lo primero */
+            .main-content {
+                order: 1;
+                padding: 20px;
+            }
+
+            /* El sidebar pasa debajo */
+            .sidebar {
+                order: 2;
+                background-color: var(--sidebar-bg);
+                padding: 25px 20px;
+                border-top: 4px solid var(--accent-gold);
+            }
+
+            /* HEADER arriba del todo y en negro ocupando ancho completo */
+            header {
+                background-color: var(--sidebar-bg);
+                color: var(--sidebar-text);
+                margin: -20px -20px 20px; /* se extiende al borde del main */
+                padding: 20px;
+                text-align: center;
+                border-bottom: 4px solid var(--accent-gold);
+            }
+
+            header h1,
+            header .job-title,
+            header .job-subtitle {
+                color: var(--sidebar-text);
+            }
+
+            h1 {
+                font-size: 1.9rem;
+                line-height: 1.1;
+                text-transform: uppercase;
+            }
+
+            .job-title {
+                font-size: 1rem;
+                margin-top: 5px;
+            }
+
+            .job-subtitle {
+                font-size: 0.85rem;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .summary-box {
+                padding: 18px;
+            }
+
+            .summary-stats {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .summary-stats span {
+                font-size: 1.1rem;
+            }
+
+            .summary-text {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .experience-item {
+                padding-left: 15px;
+                margin-bottom: 25px;
+            }
+
+            .exp-role {
+                font-size: 1rem;
+            }
+
+            .exp-date {
+                font-size: 0.75rem;
+                margin-top: 3px;
+            }
+
+            .skills-and-tech-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .skills-block h4 {
+                font-size: 0.95rem;
+            }
+
+            .cert-item {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
         }
+
     </style>
 </head>
 <body>
