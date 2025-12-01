@@ -35,10 +35,12 @@ body {
 /* LAYOUT COMPACTO */
 /* ------------------------------------------ */
 .cv {
+    /* Reducir margen superior/inferior para más espacio vertical */
     max-width: 900px;
-    margin: 12px auto;
+    margin: 8px auto; 
     display: grid;
-    grid-template-columns: 190px 1fr;
+    /* Aumentar barra lateral a 200px para acomodar el summary-box */
+    grid-template-columns: 200px 1fr; 
     border: 1px solid #ddd;
 }
 
@@ -50,12 +52,13 @@ body {
     color: var(--sidebar-text);
     padding: 14px;
     font-size: 10px;
+    /* Eliminamos las propiedades flexbox para que las secciones fluyan */
 }
 
 .photo {
-    width: 110px;
-    height: 110px;
-    margin: 0 auto 12px;
+    width: 100px; /* Reducido un poco */
+    height: 100px; /* Reducido un poco */
+    margin: 0 auto 10px; /* Reducido margen inferior */
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--accent);
@@ -70,51 +73,76 @@ body {
     letter-spacing: .5px;
 }
 
-.sidebar .item { margin-bottom: 6px; }
+.sidebar .item { margin-bottom: 5px; } /* Reducido margen */
+
+/* ------------------------------------------ */
+/* SUMMARY (Ahora en el Sidebar) */
+/* ------------------------------------------ */
+.summary-box {
+    padding: 0 0 10px 0; /* Sin padding a la izquierda, más compacto */
+    margin-bottom: 12px;
+    border-bottom: 1px solid #333; /* Separador */
+}
+
+.summary-box p {
+    color: var(--sidebar-text); /* Aseguramos que el texto sea visible */
+    font-size: 9.5px; /* Reducido un poco más el tamaño de fuente */
+    margin-bottom: 3px;
+}
+
+
+.stats {
+    /* Mantenemos el estilo de apilado vertical */
+    display: flow-root; 
+    font-size: 9px; 
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+.stats > div {
+    margin-bottom: 2px; /* Espacio entre cada stat */
+}
+
+/* ------------------------------------------ */
+/* INTERESES (Integrado en el flujo) */
+/* ------------------------------------------ */
+.intereses h3 {
+    margin-top: 10px; /* Asegurar espaciado */
+}
+.intereses p {
+    color: #bbb;
+    font-size: 9px;
+    line-height: 1.3;
+}
+
 
 /* ------------------------------------------ */
 /* MAIN */
 /* ------------------------------------------ */
 main {
-    padding: 18px 20px;
+    padding: 14px 18px; /* Reducido padding */
 }
 
+header { margin-bottom: 8px; } /* Más compacto */
+
 header h1 {
-    font-size: 20px;
-    margin-bottom: 2px;
+    font-size: 18px; /* Reducido font-size */
+    margin-bottom: 1px;
     text-transform: uppercase;
 }
 header h1 span { color: var(--accent); }
 
-.job-title { font-size: 11px; margin-bottom: 2px; color: var(--muted); }
-.job-subtitle { font-size: 10px; color: var(--muted); margin-bottom: 8px; }
-
-/* ------------------------------------------ */
-/* SUMMARY */
-/* ------------------------------------------ */
-.summary-box {
-    border-left: 3px solid var(--accent);
-    padding-left: 10px;
-    margin-bottom: 12px;
-}
-
-.stats {
-    display: flex;
-    gap: 6px;
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 5px;
-}
+.job-title { font-size: 10px; margin-bottom: 1px; color: var(--muted); }
+.job-subtitle { font-size: 9px; color: var(--muted); margin-bottom: 5px; }
 
 /* ------------------------------------------ */
 /* TITULARES */
 /* ------------------------------------------ */
 .section-title {
-    font-size: 12px;
+    font-size: 11px; /* Reducido font-size */
     color: var(--accent);
     text-transform: uppercase;
-    margin: 10px 0 6px;
+    margin: 8px 0 5px; /* Reducido margen */
     font-weight: 700;
 }
 
@@ -122,29 +150,31 @@ header h1 span { color: var(--accent); }
 /* EXPERIENCIA ULTRA-COMPACTA */
 /* ------------------------------------------ */
 .job {
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reducido margen */
 }
 .job-header {
     display: flex;
     justify-content: space-between;
-    font-size: 11px;
+    font-size: 10px; /* Reducido font-size */
     font-weight: 700;
 }
 .job-company {
-    font-size: 10px;
+    font-size: 9px; /* Reducido font-size */
     color: var(--muted);
 }
 .job-desc {
     font-style: italic;
-    margin: 3px 0;
+    margin: 2px 0; /* Reducido margen */
+    font-size: 10px;
 }
 
 ul.compact {
-    margin-left: 12px;
+    margin-left: 10px; /* Reducido margen */
 }
 ul.compact li {
-    margin-bottom: 3px;
+    margin-bottom: 2px; /* Reducido margen */
     list-style: "▹ ";
+    font-size: 10px;
 }
 
 /* ------------------------------------------ */
@@ -153,13 +183,22 @@ ul.compact li {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 10px; /* Reducido gap */
 }
 
 .grid-2 h4 {
-    font-size: 11px;
-    margin-bottom: 3px;
+    font-size: 10px; /* Reducido font-size */
+    margin-bottom: 2px;
     border-bottom: 1px solid #ddd;
+}
+/* Reducir aún más el listado de certificaciones */
+main .compact li {
+    font-size: 10px;
+}
+
+main .compact li a {
+    text-decoration: none;
+    color: var(--text);
 }
 
 /* ------------------------------------------ */
@@ -176,19 +215,27 @@ ul.compact li {
 
 <div class="cv">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+        <aside class="sidebar">
 
         <div class="photo">
             <img src="data:image/jpg;base64,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">
         </div>
+        
+                <div class="summary-box">
+            <div class="stats">
+                <div>+20 Años Experiencia</div><div>Gestión Producto & Proyectos IT</div><div>B2B / B2C - SaaS  +15Países</div>
+            </div>
+            <p>Gerente de Proyectos IT y Producto Digital con 20+ años liderando productos digitales, proyectos tecnológicos complejos y plataformas SaaS en entornos multinacionales.</p>
+            <p>Amplia experiencia en delivery, operaciones, PMO, gobernanza, modernización tecnológica y gestión de stakeholders ejecutivos (CEOs, CIOs, gubernamentales).</p>
+            <p>Liderazgo de equipos multidisciplinares, gestión de integradores y partners, y foco en métricas, calidad y resultados.</p>
+        </div>
+        
+                <h3>Contacto</h3>
+        <div class="item">📧 felixmorenorobles@gmail.com</div>
+        <div class="item">🔗 linkedin.com/in/felix-moreno-robles</div>
+        <div class="item">📍 Madrid</div>
 
-        <h3>Contacto</h3>
-        <div class="item">felixmorenorobles@gmail.com</div>
-        <div class="item">linkedin.com/in/felix-moreno-robles</div>
-        <div class="item">Madrid</div>
-
-        <h3>Formación</h3>
+                <h3>Formación</h3>
         
             <div class="item">
                 <strong>Ingeniería Superior Informática</strong><br>
@@ -203,7 +250,7 @@ ul.compact li {
             </div>
         
 
-        <h3>Skills Personales</h3>
+                <h3>Skills Personales</h3>
         
             <div class="item">• Visión estratégica</div>
         
@@ -228,14 +275,18 @@ ul.compact li {
             <div class="item">• Responsabilidad</div>
         
 
-        <h3>Idiomas</h3>
+                <h3>Idiomas</h3>
         
             <div class="item">Inglés — <strong>B2</strong></div>
         
-    </aside>
 
-    <!-- MAIN -->
-    <main>
+                <div class="intereses">
+            <h3>Intereses</h3>
+            <p>Tecnología · IA · Running · Ciclismo</p>
+        </div>
+            </aside>
+
+        <main>
 
         <header>
             <h1>Félix <span>Moreno</span></h1>
@@ -243,16 +294,7 @@ ul.compact li {
             <div class="job-subtitle">Project/Program Senior Manager · Head of Product · Producto Digital · Operaciones · Tecnología · IT Delivery · CPO · COO · CPTO</div>
         </header>
 
-        <div class="summary-box">
-            <div class="stats">
-                <div>+20 Años Experiencia</div><div>Gestión Producto & Proyectos IT</div><div>B2B / B2C - SaaS  +15_países</div>
-            </div>
-            <p>Gerente de Proyectos IT y Producto Digital con 20+ años liderando productos digitales, proyectos tecnológicos complejos y plataformas SaaS en entornos multinacionales.</p>
-            <p>Amplia experiencia en delivery, operaciones, PMO, gobernanza, modernización tecnológica y gestión de stakeholders ejecutivos (CEOs, CIOs, gubernamentales).</p>
-            <p>Liderazgo de equipos multidisciplinares, gestión de integradores y partners, y foco en métricas, calidad y resultados.</p>
-        </div>
-
-        <h2 class="section-title">Experiencia Profesional</h2>
+        <h2 class="section-title">💼 Experiencia Profesional</h2>
 
         
         <div class="job">
@@ -325,7 +367,7 @@ ul.compact li {
         </div>
         
 
-        <h2 class="section-title">Habilidades y Competencias</h2>
+        <h2 class="section-title">🛠️ Habilidades y Competencias</h2>
         <div class="grid-2">
             <div>
                 <h4>Habilidades Profesionales</h4>
@@ -369,31 +411,22 @@ ul.compact li {
             </div>
         </div>
 
-        <h2 class="section-title">Certificaciones</h2>
+        <h2 class="section-title">🏆 Certificaciones</h2>
         <ul class="compact">
         
             <li>
-                
-                    <a href="https://www.credly.com/badges/a3dbb48e-064a-4da1-a334-5e786500447b" target="_blank">PMI – Practical Application of Generative AI for Project Managers</a>
-                
+                PMI – Practical Application of Generative AI for Project Managers
             </li>
         
             <li>
-                
-                    Certificaciones Microsoft: 70-480 Programming in HTML5 with JavaScript and CSS3, MPN Competency Application Development for Technical, 3-848684 Azure Technical Assessment for Application.
-                
+                Certificaciones Microsoft: 70-480 Programming in HTML5 with JavaScript and CSS3, MPN Competency Application Development for Technical, 3-848684 Azure Technical Assessment for Application.
             </li>
         
             <li>
-                
-                    ISO/IEC 15504 (33000), Advanced Digital Signage Specialist, Herta Face Recognition Integrator
-                
+                ISO/IEC 15504 (33000), Advanced Digital Signage Specialist, Herta Face Recognition Integrator
             </li>
         
         </ul>
-
-        <h2 class="section-title">Intereses</h2>
-        <p style="color:var(--muted);">Tecnología · IA · Running · Ciclismo</p>
 
     </main>
 
