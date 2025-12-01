@@ -1,799 +1,871 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Félix Moreno</title>
-    <meta name="description" content="CV de Félix Moreno - Senior Manager de Proyectos IT & Productos Digitales (CPO · COO)">
-    <meta property="og:title" content="CV de Félix Moreno">
-    <meta property="og:description" content="Senior Manager de Proyectos IT & Productos Digitales (CPO · COO) | Gerente de Proyectos IT y Producto Digital con 20+ años liderando productos digitales, proyectos tecnológicos complejos y plataformas SaaS en...">
-    
-    <meta property="og:url" content="[COLOCA AQUÍ LA URL PUBLICA DE TU CV]">
-    <meta property="og:type" content="website">
-    
-    <meta property="og:image" content="[COLOCA AQUÍ LA URL ABSOLUTA DE LA IMAGEN PARA EL PREVIO]">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <meta name="twitter:card" content="summary_large_image">
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV - Félix Moreno</title>
+        <meta name="description" content="CV de Félix Moreno - Senior Manager de Proyectos IT & Productos Digitales (CPO · COO)">
+        <meta property="og:title" content="CV de Félix Moreno">
+        <meta property="og:description" content="Senior Manager de Proyectos IT & Productos Digitales (CPO · COO) | Gerente de Proyectos IT y Producto Digital con 20+ años liderando productos digitales, proyectos tecnológicos complejos y plataformas SaaS en...">
         
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- VARIABLES --- */
-        :root {
-            --sidebar-bg: #232321;
-            --sidebar-text: #e0e0e0;
-            --main-bg: #ffffff;
-            --text-color: #333333;
-            --accent-gold: #ae9066; 
-            --light-gray: #f8f9fa;
-            --text-muted: #888; 
-        }
+        <meta property="og:url" content="[COLOCA AQUÍ LA URL PUBLICA DE TU CV]">
+        <meta property="og:type" content="website">
+        
+        <meta property="og:image" content="[COLOCA AQUÍ LA URL ABSOLUTA DE LA IMAGEN PARA EL PREVIO]">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        
+        <meta name="twitter:card" content="summary_large_image">
+            
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <style>
+            /* --- VARIABLES --- */
+            :root {
+                --sidebar-bg: #232321;
+                --sidebar-text: #e0e0e0;
+                --main-bg: #ffffff;
+                --text-color: #333333;
+                --accent-gold: #ae9066; 
+                --light-gray: #f8f9fa;
+                --text-muted: #888; 
+            }
 
-        /* --- RESET Y BASE --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html { 
-            height: 100%; 
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #ececec;
-            color: var(--text-color);
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-            min-height: 100%;
-        }
-
-        /* --- LAYOUT DEL CV (ESCRITORIO) --- */
-        .resume-container {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            max-width: 1000px;
-            margin: 40px auto;
-            /* Usa background para dibujar el color negro en la primera columna */
-            background: var(--main-bg); 
-            background-image: linear-gradient(to right, var(--sidebar-bg) 280px, var(--main-bg) 280px);
-            background-repeat: repeat-y; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            min-height: 1200px;
-        }
-
-        /* --- SIDEBAR (IZQUIERDA) --- */
-        .sidebar {
-            color: var(--sidebar-text);
-            padding: 30px 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 35px;
-            position: relative; 
-            z-index: 2;
-        }
-
-        /* Foto de perfil */
-        .profile-photo {
-            width: 170px;
-            height: 170px;
-            background-color: #333;
-            border-radius: 50%;
-            margin: 0 auto;
-            overflow: hidden;
-            border: 3px solid var(--accent-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        .profile-initials {
-            font-size: 3rem; 
-            color: var(--accent-gold);
-            font-weight: bold;
-        }
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        /* Títulos de sección de la barra lateral */
-        .sidebar-section h3 {
-            color: var(--accent-gold);
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #444;
-            padding-bottom: 5px;
-        }
-
-        /* Estilos de contacto */
-        .contact-item { margin-bottom: 15px; }
-        .contact-label {
-            font-size: 0.7rem;
-            color: #888;
-            font-weight: bold;
-            margin-bottom: 3px;
-            text-transform: uppercase;
-            display: block;
-        }
-        .contact-value, .contact-value a {
-            font-size: 0.85rem;
-            color: var(--sidebar-text);
-            text-decoration: none;
-            word-break: break-all;
-        }
-        .contact-value a:hover { color: var(--accent-gold); }
-
-        /* Estilos de formación */
-        .education-item { margin-bottom: 15px; }
-        .education-degree { color: #fff; font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 3px; }
-        .education-school { font-size: 0.8rem; color: #999; }
-
-        /* Estilos de skills (personales) */
-        .skills-list { list-style: none; padding: 0; }
-        .skills-list li {
-            margin-bottom: 6px;
-            font-size: 0.8rem;
-            padding-left: 15px;
-            position: relative;
-        }
-        .skills-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-            font-weight: bold;
-        }
-
-        /* Estilos de idiomas */
-        .lang-item { font-size: 0.85rem; margin-bottom: 5px; display: flex; justify-content: space-between; border-bottom: 1px dotted #444; padding-bottom: 2px;}
-
-
-        /* --- MAIN CONTENT (DERECHA) --- */
-        .main-content {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Cabecera del CV (Nombre y Título) */
-        header {
-            margin-bottom: 30px;
-            border-bottom: 3px solid var(--accent-gold);
-            padding-bottom: 15px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: var(--sidebar-bg);
-            text-transform: uppercase;
-            line-height: 1;
-            margin-bottom: 5px;
-            letter-spacing: -1px;
-        }
-
-        h1 span { color: var(--accent-gold); }
-
-        .job-title {
-            font-size: 1.1rem;
-            color: #555;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .job-subtitle {
-            font-size: 0.9rem;
-            color: #777;
-            font-weight: 400;
-        }
-
-        /* Caja de Resumen */
-        .summary-box {
-            background-color: var(--light-gray);
-            padding: 20px;
-            border-left: 5px solid var(--accent-gold);
-            margin-bottom: 35px;
-            border-radius: 0 5px 5px 0;
-            page-break-inside: avoid;
-        }
-
-        .summary-stats {
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-            margin-bottom: 5px; 
-            margin-top: 0px;
-            text-align: center;
-            border-bottom: 1px solid #ddd; 
-            padding-bottom: 5px;
-        }
-
-        .summary-stats span {
-            display: block;
-            font-size: 1.0rem; 
-            font-weight: 700; 
-            color: var(--accent-gold); 
-            line-height: 1.2;
-            padding: 5px 0; 
-            text-transform: uppercase; 
-        }
-
-        .summary-text {
-            font-size: 0.9rem;
-            color: #444;
-            text-align: justify;
-        }
-
-        /* Títulos de Secciones Principales */
-        .section-title {
-            color: var(--accent-gold);
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-        }
-        .section-title::after {
-            content: "";
-            flex-grow: 1;
-            height: 2px;
-            background: #eee;
-            margin-left: 15px;
-        }
-
-        /* Items de Experiencia */
-        .experience-item {
-            margin-bottom: 35px;
-            padding-left: 20px;
-            border-left: 2px solid #eee;
-            page-break-inside: avoid;
-        }
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
-            flex-wrap: wrap;
-        }
-        .exp-role { font-size: 1.1rem; font-weight: 700; color: #222; }
-        .exp-company { font-size: 0.9rem; color: #666; font-weight: 600; margin-bottom: 5px; display: block;}
-        .exp-date { font-size: 0.8rem; color: var(--accent-gold); font-weight: bold; }
-        .exp-desc { font-size: 0.9rem; margin-bottom: 10px; font-weight: 500; color: #333; font-style: italic;}
-
-        /* Listas de Logros/Responsabilidades */
-        .exp-bullets { list-style: none; margin-top: 10px; }
-        .exp-bullets li {
-            font-size: 0.85rem;
-            margin-bottom: 6px;
-            padding-left: 18px;
-            position: relative;
-            color: #444;
-        }
-        .exp-bullets li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-            font-weight: bold;
-            line-height: 1;
-        }
-        .exp-bullets strong { color: #222; }
-
-        /* --- GRID DE HABILIDADES Y COMPETENCIAS (2 COLUMNAS) --- */
-        .skills-and-tech-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            page-break-inside: avoid;
-        }
-
-        .skills-block { page-break-inside: avoid; }
-
-        .skills-block h4 {
-            font-size: 1rem;
-            color: var(--sidebar-bg);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        /* Estilos de Certificaciones */
-        .cert-grid {  }
-        .cert-item a { color: #555; text-decoration: none; transition: color 0.2s ease; }
-        .cert-item a:hover {color: var(--accent-gold) !important; text-decoration: underline; }
-        .cert-item { font-size: 0.85rem; color: #555; display: flex; align-items: flex-start; }
-        .cert-item::before { content: "✓"; color: var(--accent-gold); margin-right: 8px; font-weight: bold; }
-
-
-        /* --- PRINT OPTIMIZATION --- */
-        @media print {
-            body { 
-                background-color: #fff; 
-                margin: 0; 
-                padding: 0; 
-                min-height: 100%;
-                height: auto;
-            } 
-
-            .resume-container {
+            /* --- RESET Y BASE --- */
+            * {
+                box-sizing: border-box;
                 margin: 0;
-                box-shadow: none;
-                width: 100%;
-                max-width: 100%;
-                grid-template-columns: 260px 1fr; 
-                min-height: auto !important; 
-                height: auto; 
-                display: grid; 
-                
-                /* CLAVE PARA LA IMPRESIÓN MULTIPÁGINA: Dibuja el fondo de la primera columna */
-                background-image: linear-gradient(to right, #232321 260px, #ffffff 260px); 
-                background-repeat: repeat-y;
-                
-                /* Asegura que los colores se impriman (necesario para el fondo) */
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact; 
+                padding: 0;
             }
 
-            .sidebar {
-                color: #e0e0e0 !important; 
-                height: auto;
-                padding-top: 20px;
-                position: relative;
-                z-index: 2;
+            html { 
+                height: 100%; 
             }
-            
-            .summary-box {
-                background-color: #f4f4f4 !important;
-                -webkit-print-color-adjust: exact;
-                border-left: 5px solid var(--accent-gold);
+
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #ececec;
+                color: var(--text-color);
+                line-height: 1.5;
+                -webkit-font-smoothing: antialiased;
+                min-height: 100%;
             }
-            a { text-decoration: none; color: inherit; }
-            .experience-item, .summary-box { page-break-inside: auto; }
-            .skills-and-tech-grid, .skills-block { page-break-inside: avoid; }
-            
-            .main-content { padding: 30px 40px; }
-            .sidebar { padding: 30px 20px; }
-        }
 
-        /* --- RESPONSIVE: Versión móvil con nombre primero y en negro --- */
-        @media screen and (max-width: 768px) {
+            /* --- ESTILOS PARA CONTROLES --- */
+            .controls {
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 0px; 
+                background: #fff;
+                border-bottom: 1px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
 
-            /* Ahora usamos flex y reordenamos */
+            .controls a, .controls button {
+                display: inline-block;
+                padding: 8px 15px;
+                margin: 0 5px;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 500;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+                /* Estilo base de los botones: Fondo blanco, texto oscuro */
+                border: 1px solid #ccc;
+                background-color: #fff;
+                color: var(--text-color); /* Usamos el color de texto oscuro */
+            }
+
+            /* Estilo para el botón activo o al pasar el ratón (HOVER) */
+            .controls a.active, 
+            .controls a:hover, 
+            .controls button:hover {
+                /* Fondo se convierte al color de acento (marrón/dorado) */
+                background-color: var(--accent-gold); 
+                /* El texto debe ser CLARO (blanco) para contrastar con el marrón/dorado */
+                color: white; 
+                border-color: var(--accent-gold);
+            }
+
+            /* Estilo base para el botón de Imprimir si quieres que sea ligeramente gris */
+            .controls button {
+                background-color: #f1f1f1;
+                border-color: #ddd;
+            }
+            /* Al hacer hover en el botón de imprimir, usa el acento */
+            .controls button:hover {
+                background-color: var(--accent-gold);
+                color: white;
+            }
+
+            /* --- LAYOUT DEL CV (ESCRITORIO) --- */
             .resume-container {
+                display: grid;
+                grid-template-columns: 280px 1fr;
+                max-width: 1000px;
+                margin: 40px auto;
+                /* Usa background para dibujar el color negro en la primera columna */
+                background: var(--main-bg); 
+                background-image: linear-gradient(to right, var(--sidebar-bg) 280px, var(--main-bg) 280px);
+                background-repeat: repeat-y; 
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                min-height: 1200px;
+            }
+
+            /* --- SIDEBAR (IZQUIERDA) --- */
+            .sidebar {
+                color: var(--sidebar-text);
+                padding: 30px 25px;
                 display: flex;
                 flex-direction: column;
-                margin: 0;
+                gap: 35px;
+                position: relative; 
+                z-index: 2;
+            }
+
+            /* Foto de perfil */
+            .profile-photo {
+                width: 170px;
+                height: 170px;
+                background-color: #333;
+                border-radius: 50%;
+                margin: 0 auto;
+                overflow: hidden;
+                border: 3px solid var(--accent-gold);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            }
+            .profile-initials {
+                font-size: 3rem; 
+                color: var(--accent-gold);
+                font-weight: bold;
+            }
+            .profile-image {
                 width: 100%;
-                box-shadow: none;
-
-                /* Quitamos el degradado de dos columnas en móvil */
-                background: var(--main-bg);
-                background-image: none;
-                min-height: auto;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
             }
 
-            /* El MAIN (con el header) pasa a ser lo primero */
+            /* Títulos de sección de la barra lateral */
+            .sidebar-section h3 {
+                color: var(--accent-gold);
+                font-size: 0.95rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #444;
+                padding-bottom: 5px;
+            }
+
+            /* Estilos de contacto */
+            .contact-item { margin-bottom: 15px; }
+            .contact-label {
+                font-size: 0.7rem;
+                color: #888;
+                font-weight: bold;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+                display: block;
+            }
+            .contact-value, .contact-value a {
+                font-size: 0.85rem;
+                color: var(--sidebar-text);
+                text-decoration: none;
+                word-break: break-all;
+            }
+            .contact-value a:hover { color: var(--accent-gold); }
+
+            /* Estilos de formación */
+            .education-item { margin-bottom: 15px; }
+            .education-degree { color: #fff; font-weight: 500; font-size: 0.9rem; display: block; margin-bottom: 3px; }
+            .education-school { font-size: 0.8rem; color: #999; }
+
+            /* Estilos de skills (personales) */
+            .skills-list { list-style: none; padding: 0; }
+            .skills-list li {
+                margin-bottom: 6px;
+                font-size: 0.8rem;
+                padding-left: 15px;
+                position: relative;
+            }
+            .skills-list li::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: var(--accent-gold);
+                font-weight: bold;
+            }
+
+            /* Estilos de idiomas */
+            .lang-item { font-size: 0.85rem; margin-bottom: 5px; display: flex; justify-content: space-between; border-bottom: 1px dotted #444; padding-bottom: 2px;}
+
+
+            /* --- MAIN CONTENT (DERECHA) --- */
             .main-content {
-                order: 1;
-                padding: 20px;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
             }
 
-            /* El sidebar pasa debajo */
-            .sidebar {
-                order: 2;
-                background-color: var(--sidebar-bg);
-                padding: 25px 20px;
-                border-top: 4px solid var(--accent-gold);
-            }
-
-            /* HEADER arriba del todo y en negro ocupando ancho completo */
+            /* Cabecera del CV (Nombre y Título) */
             header {
-                background-color: var(--sidebar-bg);
-                color: var(--sidebar-text);
-                margin: -20px -20px 20px; /* se extiende al borde del main */
-                padding: 20px;
-                text-align: center;
-                border-bottom: 4px solid var(--accent-gold);
-            }
-
-            header h1,
-            header .job-title,
-            header .job-subtitle {
-                color: var(--sidebar-text);
+                margin-bottom: 30px;
+                border-bottom: 3px solid var(--accent-gold);
+                padding-bottom: 15px;
             }
 
             h1 {
-                font-size: 1.9rem;
-                line-height: 1.1;
+                font-size: 2.5rem;
+                color: var(--sidebar-bg);
                 text-transform: uppercase;
+                line-height: 1;
+                margin-bottom: 5px;
+                letter-spacing: -1px;
             }
+
+            h1 span { color: var(--accent-gold); }
 
             .job-title {
-                font-size: 1rem;
-                margin-top: 5px;
+                font-size: 1.1rem;
+                color: #555;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                display: block;
+                margin-bottom: 5px;
             }
-
             .job-subtitle {
-                font-size: 0.85rem;
+                font-size: 0.9rem;
+                color: #777;
+                font-weight: 400;
             }
 
-            .profile-photo {
-                width: 140px;
-                height: 140px;
-            }
-
+            /* Caja de Resumen */
             .summary-box {
-                padding: 18px;
+                background-color: var(--light-gray);
+                padding: 20px;
+                border-left: 5px solid var(--accent-gold);
+                margin-bottom: 35px;
+                border-radius: 0 5px 5px 0;
+                page-break-inside: avoid;
             }
 
             .summary-stats {
-                grid-template-columns: 1fr;
-                gap: 10px;
+                display: grid; 
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+                margin-bottom: 5px; 
+                margin-top: 0px;
+                text-align: center;
+                border-bottom: 1px solid #ddd; 
+                padding-bottom: 5px;
             }
 
             .summary-stats span {
-                font-size: 1.1rem;
+                display: block;
+                font-size: 1.0rem; 
+                font-weight: 700; 
+                color: var(--accent-gold); 
+                line-height: 1.2;
+                padding: 5px 0; 
+                text-transform: uppercase; 
             }
 
             .summary-text {
                 font-size: 0.9rem;
+                color: #444;
+                text-align: justify;
             }
 
+            /* Títulos de Secciones Principales */
             .section-title {
-                font-size: 1.1rem;
-            }
-
-            .experience-item {
-                padding-left: 15px;
+                color: var(--accent-gold);
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
                 margin-bottom: 25px;
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+            }
+            .section-title::after {
+                content: "";
+                flex-grow: 1;
+                height: 2px;
+                background: #eee;
+                margin-left: 15px;
             }
 
-            .exp-role {
-                font-size: 1rem;
+            /* Items de Experiencia */
+            .experience-item {
+                margin-bottom: 35px;
+                padding-left: 20px;
+                border-left: 2px solid #eee;
+                page-break-inside: avoid;
             }
-
-            .exp-date {
-                font-size: 0.75rem;
-                margin-top: 3px;
+            .exp-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 5px;
+                flex-wrap: wrap;
             }
+            .exp-role { font-size: 1.1rem; font-weight: 700; color: #222; }
+            .exp-company { font-size: 0.9rem; color: #666; font-weight: 600; margin-bottom: 5px; display: block;}
+            .exp-date { font-size: 0.8rem; color: var(--accent-gold); font-weight: bold; }
+            .exp-desc { font-size: 0.9rem; margin-bottom: 10px; font-weight: 500; color: #333; font-style: italic;}
 
+            /* Listas de Logros/Responsabilidades */
+            .exp-bullets { list-style: none; margin-top: 10px; }
+            .exp-bullets li {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+                padding-left: 18px;
+                position: relative;
+                color: #444;
+            }
+            .exp-bullets li::before {
+                content: "▹";
+                position: absolute;
+                left: 0;
+                color: var(--accent-gold);
+                font-weight: bold;
+                line-height: 1;
+            }
+            .exp-bullets strong { color: #222; }
+
+            /* --- GRID DE HABILIDADES Y COMPETENCIAS (2 COLUMNAS) --- */
             .skills-and-tech-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                page-break-inside: avoid;
             }
+
+            .skills-block { page-break-inside: avoid; }
 
             .skills-block h4 {
-                font-size: 0.95rem;
+                font-size: 1rem;
+                color: var(--sidebar-bg);
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 5px;
             }
 
-            .cert-item {
-                font-size: 0.85rem;
-                margin-bottom: 8px;
+            /* Estilos de Certificaciones */
+            .cert-grid {  }
+            .cert-item a { color: #555; text-decoration: none; transition: color 0.2s ease; }
+            .cert-item a:hover {color: var(--accent-gold) !important; text-decoration: underline; }
+            .cert-item { font-size: 0.85rem; color: #555; display: flex; align-items: flex-start; }
+            .cert-item::before { content: "✓"; color: var(--accent-gold); margin-right: 8px; font-weight: bold; }
+
+            @media print {
+                /* OCULTAR CONTROLES */
+                .controls { 
+                    display: none !important; /* Oculta el selector y el botón al imprimir */
+                }
+
+                /* MÁRGENES DE PÁGINA (Sin márgenes) */
+                @page { 
+                    margin: 0 !important; /* Configura la impresión sin márgenes */
+                }
+
+                body { 
+                    background-color: #fff; 
+                    margin: 0; 
+                    padding: 0; 
+                    min-height: 100%;
+                    height: auto;
+                }
+
+                .cv { 
+                    border: none; 
+                    margin: 0 auto; 
+                    padding: 0;
+                    max-width: 100%; 
+                }
+
+                .resume-container {
+                    margin: 0;
+                    box-shadow: none;
+                    width: 100%;
+                    max-width: 100%;
+                    grid-template-columns: 260px 1fr; 
+                    min-height: auto !important; 
+                    height: auto; 
+                    display: grid; 
+                    
+                    /* CLAVE PARA LA IMPRESIÓN MULTIPÁGINA: Dibuja el fondo de la primera columna */
+                    background-image: linear-gradient(to right, #232321 260px, #ffffff 260px); 
+                    background-repeat: repeat-y;
+                    
+                    /* Asegura que los colores se impriman (necesario para el fondo) */
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact; 
+                }
+
+                .sidebar {
+                    color: #e0e0e0 !important; 
+                    height: auto;
+                    padding-top: 20px;
+                    position: relative;
+                    z-index: 2;
+                }
+                
+                .summary-box {
+                    background-color: #f4f4f4 !important;
+                    -webkit-print-color-adjust: exact;
+                    border-left: 5px solid var(--accent-gold);
+                }
+                a { text-decoration: none; color: inherit; }
+                .experience-item, .summary-box { page-break-inside: auto; }
+                .skills-and-tech-grid, .skills-block { page-break-inside: avoid; }
+                
+                .main-content { padding: 30px 40px; }
+                .sidebar { padding: 30px 20px; }
             }
-        }
 
-    </style>
-</head>
-<body>
+            /* --- RESPONSIVE: Versión móvil con nombre primero y en negro --- */
+            @media screen and (max-width: 768px) {                
+                
+                /* Ahora usamos flex y reordenamos */
+                .resume-container {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                    width: 100%;
+                    box-shadow: none;
 
-    <div class="resume-container">
-        <aside class="sidebar">
+                    /* Quitamos el degradado de dos columnas en móvil */
+                    background: var(--main-bg);
+                    background-image: none;
+                    min-height: auto;
+                }
+
+                /* El MAIN (con el header) pasa a ser lo primero */
+                .main-content {
+                    order: 1;
+                    padding: 20px;
+                }
+
+                /* El sidebar pasa debajo */
+                .sidebar {
+                    order: 2;
+                    background-color: var(--sidebar-bg);
+                    padding: 25px 20px;
+                    border-top: 4px solid var(--accent-gold);
+                }
+
+                /* HEADER arriba del todo y en negro ocupando ancho completo */
+                header {
+                    background-color: var(--sidebar-bg);
+                    color: var(--sidebar-text);
+                    margin: -20px -20px 20px; /* se extiende al borde del main */
+                    padding: 20px;
+                    text-align: center;
+                    border-bottom: 4px solid var(--accent-gold);
+                }
+
+                header h1,
+                header .job-title,
+                header .job-subtitle {
+                    color: var(--sidebar-text);
+                }
+
+                h1 {
+                    font-size: 1.9rem;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                }
+
+                .job-title {
+                    font-size: 1rem;
+                    margin-top: 5px;
+                }
+
+                .job-subtitle {
+                    font-size: 0.85rem;
+                }
+
+                .profile-photo {
+                    width: 140px;
+                    height: 140px;
+                }
+
+                .summary-box {
+                    padding: 18px;
+                }
+
+                .summary-stats {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+
+                .summary-stats span {
+                    font-size: 1.1rem;
+                }
+
+                .summary-text {
+                    font-size: 0.9rem;
+                }
+
+                .section-title {
+                    font-size: 1.1rem;
+                }
+
+                .experience-item {
+                    padding-left: 15px;
+                    margin-bottom: 25px;
+                }
+
+                .exp-role {
+                    font-size: 1rem;
+                }
+
+                .exp-date {
+                    font-size: 0.75rem;
+                    margin-top: 3px;
+                }
+
+                .skills-and-tech-grid {
+                    grid-template-columns: 1fr;
+                    gap: 25px;
+                }
+
+                .skills-block h4 {
+                    font-size: 0.95rem;
+                }
+
+                .cert-item {
+                    font-size: 0.85rem;
+                    margin-bottom: 8px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="controls">
+            <a href="index.html" class="">Vista Normal</a>
+            <a href="index_compact.html" class="">Vista Compacta</a>
             
-            <div class="profile-photo">
-                
-                
-                <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAG7AbsDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAECAwQFBgf/xAA5EAACAgEDAwIEAwUIAwEBAAAAAQIRAwQhMRJBUQVhEyJxgTKhsRRCUpHBBiMzYnLR4fAkkvElgv/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAHREBAQEBAQEAAwEAAAAAAAAAAAERAjEhAxJBUf/aAAwDAQACEQMRAD8A+jABlQAAAAAAAAAAAAAAAAAkIgEgBQoAAQSAFCgAAoACASAIBIAgEkAAAAAAAAAAAAAAAMAAQSAIAAAAAAAAAAAAASAAoAAAAAAAAAAAAAAAASAAAAQABQABAAAAGWXUY8P45K328nDl9Tk0/hQ6feQ1ZLXpg8WWrz5JW5tLxHbYq8mRuLeWeztbk1r9K9wHkrVZk763/I1hrci/ElJD9j9K9EHNi1kJtKS6W1e/B0KSkrTTXkus4kgkBEAkgAAAAAAAAAAAAAAgEkAAAAAAAAAAABIACgAAAAAAAAAAAAAAAJAAAAFQAAAA5dVrFiuEN59/Yixrlz48X4nv4ODNrZzVL5V4Ry5MzcrbtvlmbnZm10nLSUurn+bKFU7JVmNdJFlsSmRQXJNaxdMsuSqLIGJNMWaeJ1F7eHwZ0SWXEselh1MMuz+WXh9zc8ZHXp9W41HJuvPdGp049cf47iAmmrW6JNuYQSQAAAAAAAAAAAAgkMCASQAAAAAAAAAAAUAAAkgATYIAEgWAAAAAAASQAJBAAkA5dfq1pMPypSyz2hHz7/RFMV12s+E/hY/8Rq27/CjyZ5PffuRKTS3k3J7tvuzKT3OdrrzynqsKRnaLx7bmXSNYl0UiXSI0miUiWqJj7ogJFkTRKQChRNMnpAqC6iQ1RUbabUfCajJ3B/kegeQ0dmiz3/dSe6/D/sb5v8ce+f66wAbchkAAAAAAAAAAAAAIJogAAAAAAAAACAFLFkACbFkACwKkgSCLFgSTZWyQJsEACQQAJBBIETnHFjlkm1GEVbb7I+dy556nPLUZFTe0I/wx8fU6vWdR8XNDSRkuiPzZUu77L+v8jgkzNrfMJO3ZV78ixRh1RRpFFUjRIy1GkeC6M1yaLkKul7loorHgsnsBdC9iESBKZPBVItewAEWTYRVkJuMlKLpp2mSyHwEr1MORZcSmtn3Xhmh5+hydOTofEuPqegdpdjz9TKEEgrKASQAAAAAAAAAAAEAkgAAAAAAqBZAVIsiyALWLKgKtYsqAiwKiwLArYsC1grZNgWFkWAJsrkyxxYp5JcQTk15Js8/1rN0aWONSp5Jbru4rd196Cx5ClKTlkyO5zdya7sJkdhZzrtEkorZMdjNai9eC8eCqLN7EaWTLp7FEqLpbEFou0XTZSJdFVcXsFurQfIQTbJpuiCasBRJNEgUaILNFWEE+mSkuU9j14yU4qUeGrR5DPQ0U+rBX8Lo3zXL8kdBBIOjigAAAAAAAAAAAAAIJIAAAAAAMwCCNFiwChYAAAEAA2CrZBNiylkWBpZNmXUSpAa2SmZ2WCLWeN61kctVjxtLpULX1b3/RHrng+ovq12bv00l/Jf8AIrUc6d/ckrFpq64dFlwYdYklFSyM1pdN1Rde5SJomRV4rt4LJ0UUkVeRJW2XF1rdF00cj1GNcyVj9pjLji/Iw16EOA9pGGHLa5f3L9fVkdAapdySEyspJcgXHCMXmiu5SWqhFbyCWulMqcy1UG7s0+NGr6l/MYmtDq9Pn884+VZxRyKT2Z0aGX/kxX8Sa/r/AELPWevsemADq86AAAAAAAAAAAAHAAcEAAAAAAAyABGgAAAQCgAAIfJRlmUZBDZRyJkzNvcC3UWjIysmLCt4sumZRZpEIufO6t9Wpztc/Ea/M+iR89q9s+X3m/1JVjBO3vz3NKozgn8RKkbMzXWKMJhlJTUYtkaafEUVb2MZanqnUW2ceXJLLKlZ06XSSS+ZUn/3wXMTSWocVuznyaic68dtz1YaLG92rf1ZOTRYUvmUV7vYuxMrxuqUny3RvilJPlnctPgT2af3MNRijDeMrGrI2xZaW72/Q3xZHKd+55Ucje1ndpZNtNmK3HqLg580quuTeD+U5dVt7EK48+VptJ1+p5eR5JS2k/sejllGK46n9TllnjB3LFH/ANtzpy59MYPLFXUnH67HUs2SVJ1H6loeo4FzCX8rOmGXTZVs4/QtrMiuLLPFNOUrR6+impajE1w/9jy8unXT8lL2rY6vSJP4kY+Jr8zK3x9EADo4IAAAAAAAAAAAAAQAAAAAAADIgkgjQAAJIBIEBgMopIo2WZRkFJMzbLSM2FCyKkpgbRZpFmMWaxCNUz5/W3HU541+/Jn0CPD9Wj0auVNVOKkl57f0C8uPB/ibcG8uTDS/4jfZI2kzFdYpJ0cuaTm3GP8AM6J/Qy6Xe6VEaxTBj6XfL+ptk9Qx4FUU8kl44X3OfPKUl0Y+HyyY6eMsXw0ml5ruX1Ls8Rj9Q1OpzRx/Hw6dS7ydRW3dnZpdJqM+PJljqMc5wq0kpLdJ8/c82OhyXd49u7v/AGPY0c3pdL8PHG23blLuzfxzzrWMoZoQbzafqhGk5xVoy6VNNp/KvPY6ss5zX95Ob9rpI5cnTDG3HZv8zDrHJG+s9LS9jijD5rOzA6olaj04O0YaiNzjtaNcbtcjIrXuiFebnjF2lKK8v/Y8nW44xy1BtxcebPoMkPYw+Hb3Sa+hqXGOudeJinjeCWOWCMsrb6ZqTtP5e32f/sd+p9PWDDGeOXTkUV1LlPydi0idNKvddi8tEpNu3fuzV6YnDh9P1cpyeLLd9rZ6eluGojJ3yjDLpIxanBU0+xvjptO5X9KMa1nx9GCIu4p+VZJ1ecIJZAAAAAAAAAAAAOCCeCAAAAAADEAEaAAAABQD4AfAGcjORpIzZBnMzZeRQKglEEoDSJrExibRCOfW656d9GOnOrbfY8zVameocZZVG47WlTa/7Zl6nOcdfkqTVPgpjl8SDtUzO13nHxfTbucu3Bo0Uw2k49i/clIr0rgq8PsbV4NFDbyYbcfwlHtsb44x8/mbKFeC0YLhr+Y0Uhix8/oXcYwjSSLqCj2KyoumOeavd8HNOPVK39jslG93x2Oaa+YQxmlRpidNFWWgt0VXo4pWjWXBhhTVG7RFUeOyjx93+RuuA42GWKg/3X/MlJvlktNPYJ2rRBFeN/qR01wi6V0S6orOPV0zvBj/ANKNTDRO9ND2tfmbnaePNfRkEkBAAAAAAAAAMABwQAAAAAAAYgAjQAABJAKAfAIYFJGbLyKMgykZmkjMKEogmIF4m0TKJrEI8b1vEo6tSXMopvf7f0OPEmo32fJ6vrWK44slf5W/0/qeVk+XDGKfO5i+vTzd5jbC7u/HPku+SmCHRhhbttWW3sIvHybQZzrc1i79jNajVvelyyV5Zmne6NErRGiUm9l/MjpXJbp8E9LAymtjkzfK9zulS5Z5uWXxczrhFgqn1M6sMTGCSZvhab7FR2Y40vc2r2K4mmbXFdwM+5atiuSUbaRnGdPclGrWxk4909zVOyHyQZt0VT58Pgu12KrjfkI9H013p5e02vyR1nJ6aqwTX+d/ojrO08eXr0IJZBWQAAAAAAAAAAQCeCAAAAAADEAEaAAAABQIZJDAzkZs0kZyIrORmzSRm+QCJiQiy5A0iaxM4msQjPWYll0mSPhdS+2583n2il4R9WuD5zWaZx1E8Uez2t9uV+Rmu34r/Exf91D/AEqwUxRccKi+xZkaSnuaXwYpGkTLcbxNIIxhudGN2kRV1EmUaRePBXI9twOXNfTKvB5cH05GmepN2cefApPqi+mS72WDLNNY4dTTr2KYtTGT5lH/AFKi83k6OmcU/cY8HWt0aZ16GDL8vJp8ZU2c+LTqHLdeDZppPpVfQhpjyfEndNLy+5vKKkrXJhCFd2bJkJVYSp0b3Zz5PlfV2fPsaY5WiNVMluUb3NGzJhivV0K/8aL8tnQc+hVaSC77/qzoO08eW+jIJZBUAAAAAAAAAAAZBJAAAATyLIAGIAI0AAAAABDJIYGcjNmkjOQVnIzZpIzAhF4oqXiBrE1iZRNYhF0eb6phfxcedKl+GTS/72/Q9JEThHJBwmri+QsuV87xH7lTfUQePJLG3bi9/cwMOwWTdlOC0WStRvA6YHLi3OqNUZaaucYQttUcU87yStWl2K6rLeRYo7RW7pFEqVFTV7bfAau/PgiPg0S7hFHC400i2KCTqr3LKKpXsa46ur5KYOC6dkSla4LNXxwSqitwYr0sinZp1Qfeg0gmMpO00+GimGbT6W91+Zo3tT5OZutVT7pMlWV2N7blG9/ZEp2vJEE5zjFcyfT/AD2IWvawxccONPlRV/UuHyDu8lGQSyAAAAAAAAAAAAAAAKAAgmgAMAARoAAAAAGQyWQwKSRmzSRnIDKRRmkjNhRF4oquTSIGkTRFIl0EWRKIRKA4fUtNCUHnVqcVUmu6/wC0eQz6DVQWTTZYtW3FtL6bnzz5ZmuvFR3LRX/BUm6M10jfG9zsxxqJw43ujuwtVyZaedkTefJ/qLSkoR3Z05sdZ3LtIwmlJXRWWMdQv/rNFntUvrwc0tPFu4pp+wWFdO9v6svxp0PMr/GtvLNPiVDZo5o44KkoLnk6ccMclwkxiizVu3X1LxzRktvyLPHjraMXZaOOFLZL2KrGWaK7sRz7WpJr2dm/SldRpFHiTak1uiVmqfFc5b7fYO56lP8Aylpxrd+di2KO7b7kYa9jTQx69Zj24t/kZTe1I7PS8e88jW1dK9/P9C8z6z1fj0QAdXnCAAAAAAAAAAAAAAAAAAAAsDAAEaAAAAAEBksgCj3KM0ZSSAykjNmsjNhRGkTNGkQNIouisSyCLIlEIASfOZ8bw5p45cxdfVeT6M8r1nC1OGZR2a6ZNee35foSt8X681hq3ZBMWYdVoPdM68E9+e5yUaYnRFd2X5onFkXSdCyWkYZiKzosoplY7GkUFPhpmkcbVcPbwV6X2ZZJ92DWyatXyvBK6VVGNWzSO6NJrVRit7IlXYqlSJfYiM5RtBVFE2Uk3wGdT+Jvwe1pMXwtPCLVSe8l7s8vQ4fi54xr5Y/NK+D2jpzHLu/wABpzCAAAAAAAAAAAAAAMgCSAAAAAyIJIZGgAAAAAZBJBRVlZIuVkiDGRRmkjNhRF4lEWiBtEsUiWQRYkgkCTPUYVnwTxva1s/D7Gg45A+XknCTjJNSTpp9iLpnV6i1k1OScGmr5Xc42zDvGqkS3TVGcXuXtV9DLTfG9rb3GTf3M4yL9V7ogr0v7msVbRW04+PoWg2lb/AJUBoqoqpXsJNqqb2LxXsFSoqt2rL0uCa8Jfci1HbazSJXgh78C3exH1Imo2optyXf4TXRYHnzK18kd5f7f99yyazbjv0GH4Wn6n+LJ8z+nb/vudQ5B1kxwt0AARAJZAAAAAAAAAAAAQCWQAAAAAAZMhliCNIAAAAACCQyiGUfBdlJEGcjNmkjOQVUtEpZMWBvEuZRZonYRZFiiLAWRz6yfThpcy2+xtKUYRcpSUYrlt1RwarLHLk+SSlFLZp7MuDy5pwk4Pu7iYS2Z6GSCmqlwzizQlCXz7r+JGepjrz1rK6LxkmUkun6eSF7GW23VXc0jJUkc6l5JUyWDqi+GuDoj7qjkhJWdcGq7EVOzdLgmNrbh+5LW99ikm1fsBqlbTdr7kqKSrkopW+RdPdv6lRZRvbuXaSX2KKW+4nNbEFZM9b0/D8LTpv8U/mf07HmaeCyZ4KStOSTXtZ7h05jj3QAG3MABAIJZAAAAAAAAAAAAGQAAAAAAAZkElWRoAAAAACACiGyrZLZWTIM5GcmXkzKTCoCZVsi9wN4yNIs50zWMgNkyMmRYsc8kvwxVshNHn+uahY9H8NP5sj49hEeHq9Xl1eVzyyu+F2X0PWhNShBx/DWx8+3ud2h1NNY5vbsdEes0q3KtJpqStMt+7TK32YRzz03Sn8Pdfwv8AoYPBbbjs+6Z6SXn7EyhFrhP38Gbz/jpO7PXkPZ1JUxR6ktP1KqUrOaekrfG/sznZY6Sy+OeMunubwzJVdmcoNf4kHFeVujRYscl8rT+hFbrOmuUPibbcGDxOKtNtBY+pX1P+ZBs8lrwS5pKjJYZdpsvHTvvuEOt/u8mkIt8loYq7IuopOkBtp0o5MfU0l1Jt/c9g8HUNx082tmoujr9I1/xsfw58r8Lfc3y59x6YANuYACAQSAIAAAAAAAAAAEAlkAAAAIskgChUkgjQCABJAsgAQ2GyL2AhlJMlszlICsmZyZaTM3uFQ2CABZM0jIxLKXnsBbUauGlxOc/svLPm9XqZ6nK5zbbfG/CNdfqvj520/ljtE5GakRmyYug/zK8Gke1odV8WHRN/MvzOu96PnseRwkpRdNHsaTULNHfaS59io78a88F2vHBXCtqZpKNKyoovYs4xk91v5KquxdVVsYaznju1yc0sC6r6Wn5WzPQjHzwROKe1Jr6cHO/jl8dJ+S/15yUo7N2vchrpfUlt5R3S06a+WVezMJ4pY3umvKOd5sdJ1Kpjl5pP3RukmuEZKO9o1g2vBhpKV8BbMnqZCpIDD1CfRocrfsvzRyaHK8c4yTryy3q+X/xZR7Nr9Tn0f+EvLtnTnxz69fY4cqy4lNdy55/pWS4dL+x6BtyAAAABAIJAEAAAAAAAAEAAAAAIAAyIBBGgEEWBJDYKtgS2VbIbKSkAcikmJSM2wpJlGyWVAAEN0rbpICyOD1LU9ONYov8AFzTK6rXVccWz/iPLlkbnv38mpBEn3KWWlT37FGqNMpIZKIAI1w5ZYpqUXTRkOAPptBnjmh1LtyvB2Sja27Hy2k1UtPlU47rur5PpdPqMepw/ExSv+Jd17GmVZLfYuvm5Imr+pWD8sDohaVPgdNbr/wCCF8Nbdy1Vuioq2q2KJ9pXsTPdlLrZ/wDwipeCMt47fQo8UlxurrY2g6Vrey3xKknD8V9Mdu/doxeJW53Y5X45KTdLc1yRlbk1s3drj+Zx6ifSmcLMd5deZ6tltRiuLs00EbV9oxOTXvqkvqel6XGL6Oq/nZ05nxy69ex6fcYpnrbPdHxuP1PVx1cumS+HGbqCW1eL5PpsGuxdUMWSSi5QUovs0/8Ak63nHLddgAOagAAAAAQSQAAAAAAGQAAAIYAgkgDAgENkaSVtEWVcgLN+5Vv3KuRWUgJlIpJkSkUcgqW7KtkXYAgAzzZo4odUn9vIEznGEXKTpI8vV6yWV1G1HwU1Gplmlbey4SOZs1Ig3fLM5q1ZZsg0hF9Ub5DV/crjdTcfJegKURRdkOgKoPgkAEzo0mpyabKp439V5OdblrVdij6jFnhqcKyQ79vBPfc8H0/WPTZba/u5bOPf6n0NRlFSTTT3TXcrK8JdnwbcK0c+N9PPBtF90VFZJPfhmS5qX/w2m0+NjJuyKfMnUd5N0iyko5V/CtkRvDHKX/8AMffyMX93pcU47udOUmu/e/oPETGdynTSW/Pc871HF8NqcVUJdv4X4PY1GFSwKcWur27rscesSzabKml/h9f0rn79jPU/aN89ZXy+s3kvqevoIuGfBF1yro8jUq8kF5kke3oUv2rFe3S7b+hifxvpwfDX7Rla4+JL9Tf1DI4T0qXbDG/5spp11RX+Yz9XyKXqOSMVtBRivsv/AKejpxj0vT/Vp6aMVP8AvcHj96H08r2PoMGfFqcayYJqcX3XY+IxZHF7HXhz5NPP4umm4Pur2ONjT7AHi6X16DVamNf5orj6o9PFrNPmrozQd8W6/UmDcAEAAMCAAAAAEAAAQySAIIJZAHLZFlXIiyNJbK2Q2UcgJcispENlWwqXIq2QAABjqNRHDH/N2QDPnjhjb5fCPIz55ZJdTb29+CM2WWSTbbb7mLd8G5EGylkvYjvsVD9BdDgAZ8ZU/c3fOxzz2kmbJ9SQAgsyOAKgkhASuxHLoluiALcHsej6tJ/s+R7SfyNvj2PG4LQk07ToqPrnHp2LRT4jyzk9M1q1OHpyP+8hyvPud+OD2yppJ1V91fcussZu14fgpF3t3ukJKSyNNb9jXDBN9T+kX+rE+qrNR6owW7XnsvJpGXw59MI0n2Y6anNSrZKuCySav5NvctRGWUpyrsvHYy1MWsGSTSVY5V/6sul0Ll7vytimomlos/U3fRS+XzsS+LPXymdPrjXPUj3fTmqzTafyQbpdzxdTHa123PU9PyrPp8qhfU969u6OfDp2w9KTksUZbuLX3/6jh1mT4mu1EvOWVfzZ6mjgsOv6OKla90zg9W0/7N6hNJVGfzrbzz+dnbpxjnjsbQyOJhDjcsYadM6aU42nfYrLK8dNcPmJnCbixmudSXj+QV2YNbnx09PmnFfw3/Q9DT/2gyQqOoxqa8rZnzqk4vk3hmUtsi38kxH2Gn9T0mp2hlUZfwz2Z2Hw1Nbp37nTpfU9TpX8mRuP8Mt0TFfYEHl6P1zDnqOdfCl5/dPThOGSNwlGS8p2QSACAyCRQEEMkhgQ+SpZlQOByIcirkQ5EbGyrZDZAAgEASRYOXV6tYV0x3n+g9F9TqY4I+ZdkeTlyynJuUimXK5yttt2UbdG5EGyrYbTIKgKBAAlFWTFgVnG0VjJx5NWrRm0EWWVbbk9SfBk4oV9QNgv+sxcnFGkLlHjb9QLc7iq4G10OwEWSABvps8tPlWSHK/M+r0Wpx5NNDIpb9PRuj45Pc9D0zW/s+Xpe+Ob3X9RZo9/KvjZkoXxQyZHhzY5pt441Fr28msKS6k95bI0niWSN9O5uTGdYyUZTnLqUk97vsXUYdNprlHP8OWF0n8j/InqnHaSZRu4p01TZlnj/wCPkVcpP8yvxNuaZLn1qvKozZ8WX68HWYq7GOi6salKLacZWqPT1eO4NVuji08KjJNcSOXLt07lL9qlhzY/ly45pSX8Ub3/AKsn+0en69NHULnHLd12f/NHHgm8WRTjao97PiWq0eSElTnCvozruuNmPjIPt7mq3RgtnT5XKNYuyCxZFWLAmUU/Z+fJk4uPJqL7Pde4FYZHHhmqnGfsYTj0/MuGQnQHQtnsb49RkxSUsc3CS7o44zo1hJPZgfQ+neuLK1j1VJvia/qe0fCNdGSj3PSPV3j6dPqpNw4jNv8AD9TNg98AGVQQyzKsCHyVLMqB5TZFkNkEbCLAAArkyRxxcpukeVqdfOdqD6Y/qWTR1avWqCcMbuXnweVKTk2293yVcm+Rfc1Iyl/UoTZDKBG4sFQuhYIZBDLIgWBYq0W4IlwBR7FW6DZCuUgJUeqXsbpJLYrGKikS2AryLsIX/wBsB9mRZJIELjYsnRUlWB6mh1s7xxlJv4UaSf8AD3Po9PlWSCafKPi8c3GSknutz3/StYn8v2NSs2PYnDqi7Sr6FVDqgrW62NE73FdLdcMuo5p4L4MJY3B78HoVaKTinGmXR5urj1YXLbw6PMxr5Zpc9R7OaKcJRXDVHj41ba9znZldZd5RCNt7cn0Glg4aaCfKv9TytPgcsiS7eT2opRgorhLY1GOq+P8AVsP7P6lmir6ZPrX3/wCbOaLPa/tNh+bBmS23g/1X9TxIkGvJH1EdydgI4e25ClvRIaXIFmri153MDZPa/BXJHe1wBmmXTozZKbA6L+JGuJLhjHk8pWZRlTLTdNZF35A+t9E1v7Tg+FN3PHxfdHpnxvpeq/ZdXjy3txL6H2Sakk000+Gu5mqMgkgyKsqXZQDxyAwRsIGy5OfPq8eOEumacl2TA4fUtSpZPhxe0P1OC7Ly6W222733ZWo9kjpGVUybJaRFBEdhYIKBJAQEgE1sBUCgQTyHuiByBlIvhr7sTRm9mB0yRG/YrCfWvcmkUTewIrccgS33BHv7Agmtu6HcJjuBK9jfTZniyKVv3Ob7F7tlH2Wh1Cz4U1XHsdfK3PmPR9X8LL0N7Pg+mi73XDNMqu4u1wzOcl52NuV2McmLZ9N3+oRxanL0ppcnBghblLzJ0b6y07dmnpeP4kVJq1G3+ewqxtjx/ChX7z59jtxu4JvsYSj0y87m2Fumi1HB67h+L6blr8UPnX2/4PlEz7nPFZMMotJpxafuj4ZxcJuEuYtpmasaRLFEWIoGPoAC8eSf3SvcsuWvIGc407RQ39mZTVMCE9zWLUk4vhmHDLQlQGuNuLp9mev6V6s9Hn+Fmblgk/8A1flHjy5Uvsxll+CSfsB+gJpq000+6B4f9ndf8SH7LllvFXBvx3R7rMVVXyVLMqQeKZZ80cEOqb+i8mh4muzvJnkr2i6Qk1tOp1c8zp/h8HO5VH6lOthyt8m8ZQ3XcJtkNkWEX6vcggLkotyVotwgBVi6JaK0BaxZBIEWAKICFgLkA90ZtGpRoDP8LtG0J9Zk0Qri7QHRQ+hEGpL3Ja3KIJIABUHtySS+EBXneibFEAa45uMk0907PrPS9WtTpk7SlHZnyCd8Hoelaz9l1Kt/JJ0/YqV9cv1DVrsRFpxtC6DLy/VFFQ2VHT6TjS0qa9l+X/Jz+rL+46l2kdfo7v03Fe7rcWqnNCn7E4Wa549Sv7GUPl28l1F5fhdUfGeqY/heo5lXLv8AmfaNny39ocajrIS/ijX5/wDJKsebHcv2M47mlIihAIsCSe6ID4vwBeXzfXuZvcunQku67gc8lTCZeavkz4A2i7VPuRkbeN32ZWLo0nvF+6Avo9RLT54ZYOpRlZ93jyRy4oZIO4zVo/PIOj6T0T1To+Hpc7+V7Qk3x7GaPoCKJZBlXhZJKOOTe1Js+Zcne75PotTtp8n+lnzkuS8tVFoWVHUzTKyYK2WsCSe1FUSUSEABayGQSBHJJHDDAkjlBgACbBA7EMlCS2KM2iCxUgK4u0bRkpKzLkJuEr7AaUPBKaatAoP3CIrYlOgDD/kO4rYCF7blouiv6kp+APqvQ9b8bA8U38+P80eqz4rRaiel1EMsP3XuuLR9lhyxz4YZcfzRkrTKzXL6hi68E6XK/Mv6O/8A8+FdnJfmbZ43ilXY5fRnWny47/Ble32RR3uKaryc8l0y90dJnmjdPYIjmKltufP/ANpIXDFPw2j34P5WvueR69Dr0c3X4WmKR81F0aLgyiapmWggsyGAuwt0yCUBNtpMsnaplV+EICs1TpmbN5/NG/Bg1uBCZtHeNGJeD3ApF0zfqrpZhNVkZpN1GIH2fpGses0UZTd5IPpk/Pudx8z/AGaz9OqnifE4efB9LZiq8HLHrxzj/Emj5ucWptNU0z6Y8P1OKjq50qtJ/cctVwtEUWfJC3RplWqITaLPsGBKaslO0UCA0JW5RFvAEolELgIokcDuHwBCCJYAgkgdyCyD/CREt5KMpEEy4IIJRLVkIt3ArCTxyrszV77mWQtibcd/JRZkFnwV7gTwCCewB+SFtyJbFkrYExe/B7/9ntZ8z0s26lvDfh+D56Pc6MMnDPCUW01JNP7gfbtbHn6BfB9S1OLf54qa+z/5PRW63OHN8vq+lcduqE0/fZlYd9MNWmiX+Jkd0FZJdMv1OD1WF6bIq/dPRycnJr1eGX+llR8StpUzVPYpL/Fl9Sy5MtLkMeABAXJKC5AR7kohcsdgLJ0Z5I0/ZllyTPgDBkxZDJQFsitxflEZOYos/wACKT/H9gOvQZ5afPDJBq4uz63Fr9Nlxxn8WMbXD5R8biNlwSzR/9k=" 
-                     alt="Foto de Perfil" 
-                    class="profile-image">
-                
+            <button onclick="window.print()">🖨️ Imprimir (Sin Márgenes)</button>
+        </div>
+
+        <div class="cv"></div>
+            <div class="resume-container">
+                <aside class="sidebar">
+                    
+                    <div class="profile-photo">
+                        
+                        
+                        <img src="data:image/jpg;base64,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" 
+                            alt="Foto de Perfil" 
+                            class="profile-image">
+                        
+                    </div>
+
+                    <section class="sidebar-section">
+                        <h3>Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value"><a href="mailto:felixmorenorobles@gmail.com">felixmorenorobles@gmail.com</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value"><a href="https://www.linkedin.com/in/felix-moreno-robles/" target="_blank">linkedin.com/in/felix-moreno-robles</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Ubicación</span>
+                            <span class="contact-value">Madrid</span>
+                        </div>
+
+                    </section>
+
+                    <section class="sidebar-section">
+                        <h3>Formación</h3>
+                        
+                        <div class="education-item">
+                            <span class="education-degree">Ingeniería Superior Informática</span>
+                            <span class="education-school">
+                                Universidad Politécnica de Madrid
+                                <br>
+                                <span style="color:#bbb; font-size:0.75rem;">
+                                    1997 – 2003
+                                </span>
+                            </span>
+                        </div>
+                        
+                        <div class="education-item">
+                            <span class="education-degree">MBA – Project Management</span>
+                            <span class="education-school">
+                                Universidad de Alcalá
+                                <br>
+                                <span style="color:#bbb; font-size:0.75rem;">
+                                    2015 – 2016
+                                </span>
+                            </span>
+                        </div>
+                        
+                    </section>
+
+                    <section class="sidebar-section">
+                        <h3>Skills Personales</h3>
+                        <ul class="skills-list">
+                            
+                            <li>Visión estratégica</li>
+                            
+                            <li>Liderazgo</li>
+                            
+                            <li>Comunicación</li>
+                            
+                            <li>Desarrollo de Negocio</li>
+                            
+                            <li>Gestión de Equipos</li>
+                            
+                            <li>Negociación</li>
+                            
+                            <li>Análisis crítico</li>
+                            
+                            <li>Resolución de conflictos</li>
+                            
+                            <li>Calidad y Excelencia</li>
+                            
+                            <li>Proactividad</li>
+                            
+                            <li>Responsabilidad</li>
+                            
+                        </ul>
+                    </section>
+
+                    <section class="sidebar-section">
+                        <h3>Idiomas</h3>
+                        <div class="contact-item">
+                            
+                            <div class="lang-item"><span>Inglés</span> <strong>B2</strong></div>
+                            
+                        </div>
+                    </section>
+                </aside>
+
+                <main class="main-content">
+                    <header>
+                        <h1>Félix <span>Moreno</span></h1>
+                        <p class="job-title">Senior Manager de Proyectos IT & Productos Digitales (CPO · COO)</p>
+                        <p class="job-subtitle">Project/Program Senior Manager · Head of Product · Producto Digital · Operaciones · Tecnología · IT Delivery · CPO · COO · CPTO</p>
+                    </header>
+
+                    <section class="summary-box">
+                        <div class="summary-stats">
+                            
+                            <span>+20 Años Experiencia</span>
+                            
+                            <span>Gestión Producto & Proyectos IT</span>
+                            
+                            <span>B2B / B2C - SaaS  +15Países</span>
+                            
+                        </div>
+                        <p class="summary-text">
+                            Gerente de Proyectos IT y Producto Digital con 20+ años liderando productos digitales, proyectos tecnológicos complejos y plataformas SaaS en entornos multinacionales.
+                        </p>
+                        <p class="summary-text" style="margin-top:10px;">
+                            Amplia experiencia en delivery, operaciones, PMO, gobernanza, modernización tecnológica y gestión de stakeholders ejecutivos (CEOs, CIOs, gubernamentales).
+                        </p>
+                        <p class="summary-text" style="margin-top:10px;">
+                            Liderazgo de equipos multidisciplinares, gestión de integradores y partners, y foco en métricas, calidad y resultados.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Experiencia Profesional</h2>
+
+                        
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <span class="exp-role">Head of Product (CPO)</span>
+                                <span class="exp-date">Sep.2021 – Dic.2025 · 4 años 3 meses</span>
+                            </div>
+                            <span class="exp-company">BKOOL</span>
+                            <p class="exp-desc">Dirección global de Producto y delivery del ecosistema BKOOL (Cycling, Fitness, Web SaaS). Compañía de negocio B2C. Miembro del Comité de Dirección y reporte a CEOs.</p>
+
+                            <ul class="exp-bullets">
+                                
+                                
+                                <li><strong>Liderazgo & Alcance:</strong> Lideré el equipo/área de Producto: ~10 (POs/PMs, UX/UI, QAs) + coordinación ~30 área Tecnología. Producto global: 50.000+ usuarios en 100+ países.</li>
+                                
+                                
+                                <li><strong>Responsabilidades clave:</strong> Visión, roadmap, discovery, priorización y métricas. Gobernanza de portfolio, Gestión Ciclo de Vida del Producto (PLM) y procesos de entrega. Dirección end-to-end de proyectos.</li>
+                                
+                                
+                                <li><strong>Modernización:</strong> Impulsé la estabilidad y disponibilidad de plataforma, reduciendo deuda técnica y adoptando prácticas modernas (CI/CD, QA, SRE). Impulsé evoluciones arquitectónicas a microservicios y modernización en AWS.</li>
+                                
+                                
+                                <li><strong>Logros de Negocio:</strong> Nuevas webs orientadas a conversión. Avance en product analytics (retención, cohortes, funnels). Soporte InApp Purchases. Inclusión importantes mejoras en promociones y campañas, afiliación, Optimización de herramientas internas e impulso I+D/Realidad Aumentada. Participación en M&A y Due Diligence.</li>
+                                
+                                
+                                <li><strong>Stack tecnológico gestionado:</strong> Lideré la estrategia de producto y la dirección funcional de todos los equipos técnicos, gestionando un stack completo por áreas: <b>Producto/Business:</b> ChartMogul, Mixpanel, Mailchimp, GTM, GA4; <b>DevOps/Sistemas:</b> Sentry, GitLab CI/CD, Terraform, Docker; <b>Simulador:</b> Unity, C#; <b>Backend:</b> Java, AWS, arquitectura de microservicios y patrones event-driven, MySQL, Redis, MongoDB, Python; <b>Movilidad nativa:</b> React Native, iOS/Swift y Android/Kotlin; y <b>Web/SaaS:</b> PHP/Laravel, Node, Strapi, Next.js, React/ bajo enfoque Jamstack.</li>
+                                
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <span class="exp-role">Jefe de Operaciones & Producto (COO)</span>
+                                <span class="exp-date">Ene.2006 – Sep.2021 · 15 años 9 meses</span>
+                            </div>
+                            <span class="exp-company">Xtream/Coregrid</span>
+                            <p class="exp-desc"><b>Dirección integral del área de operaciones, producto y soporte</b>, gestionando plataformas críticas en 15+ países (justicia, seguridad, AAPP, telecomunicaciones). Responsable de la ejecución de proyectos llave en mano, mantenimiento global y continuidad de negocio. Reporte a CEO.</p>
+
+                            <ul class="exp-bullets">
+                                
+                                
+                                <li><strong>Gestión de Proyectos:</strong> Dirigí implantaciones end-to-end y proyectos tecnológicos de alta complejidad, coordinando equipos multiculturales, múltiples integradores y una amplia cartera de clientes institucionales y corporativos. Gestioné SLAs, KPIs operativos, incidencias críticas y despliegues masivos en entornos de misión crítica, abarcando justicia, archivo audiovisual, seguridad integral, TV IP y señalización digital, así como soluciones audiovisuales y proyectos especializados en ámbitos públicos y privados.</li>
+                                
+                                
+                                <li><strong>Portfolio de Producto & Arquitectura:</strong> Gestioné el portfolio completo de producto (Justicia – Cicero/eFidelius, Audiovisual – Mediabox/Xcriba, Seguridad – Broadview, digital signage, TV IP), definiendo roadmap, requisitos, diseño funcional y arquitectura de referencia. Lideré la adaptación del producto para distintos países y clientes institucionales.</li>
+                                
+                                
+                                <li><strong>Relaciones Ejecutivas & Estrategia:</strong> Interlocución directa con Ministerios, Parlamentos, Poderes Judiciales, Gobiernos regionales y alta dirección. Responsable de gobernanza tecnológica, estándares de calidad y procesos ISO/IEC.</li>
+                                
+                                
+                                <li><strong>Clientes y Organismos Clave:</strong> Experiencia desplegando soluciones en una amplia red de administraciones y entidades, incluyendo Ministerios y Poderes Judiciales (España y +15 países), Congreso de los Diputados, Asamblea Portuguesa, otros Parlamentos y Ayuntamientos, así como organismos estratégicos como AENA, DGT, CNI, Embajadas e Instituciones Penitenciarias, además de múltiples entidades del ámbito audiovisual, cultural y universitario.</li>
+                                
+                                
+                                <li><strong>Experiencia destacada en Justicia:</strong> Lideré y llevé a éxito implantaciones estatales y nacionales de sistemas de grabación judicial y archivo audiovisual, definiendo arquitecturas complejas (CPD, sedes y miles de salas), adaptando <b>Cicero/eFidelius</b> y sus subsistemas (kioskos, portales internos y ciudadanos) e integrándolos con sistemas de gestión procesal, coordinando requisitos, equipos y despliegues internacionales de alto impacto para Ministerios y Poderes Judiciales en más de 15 países.</li>
+                                
+                                
+                                <li><strong>Stack tecnológico gestionado:</strong> Lideré técnicamente infraestructura y sistemas: redes, sistemas operativos, Active Directory, servidores/cabinas/storages físicos y virtualizados (Azure, VMWare, VirtualBox, Hyper-V), gestión de backups (ARCserve/Veritas), servidores de aplicaciones (JBoss, weblogic) y streaming/video servers (Wowza, Helix, Nginx); y lideré funcionalmente a los equipos de desarrollo, con stack principal: Java, Delphi, SQL Server, MySQL y Oracle.</li>
+                                
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <span class="exp-role">Coordinador de Proyectos Audiovisuales & TI</span>
+                                <span class="exp-date">Nov.2003 – Ene.2006 · 2 años 3 meses</span>
+                            </div>
+                            <span class="exp-company">VITELSA</span>
+                            <p class="exp-desc">Liderazgo de equipos, migraciones masivas, coordinación de proyectos audiovisuales y tecnológicos en entornos críticos: justicia, DGT, universidades, AAPP.</p>
+
+                            <ul class="exp-bullets">
+                                
+                                
+                                <li><strong>Coordinación de proyectos y despliegues:</strong> Coordinaba proyectos audiovisuales y de TI para AAPP y clientes corporativos, gestionando planificación, despliegues masivos, entregas y documentación.</li>
+                                
+                                
+                                <li><strong>Integración y puesta en marcha técnica:</strong> Lideraba tareas de integración, simulaciones, pruebas y puesta en marcha de nuevos sistemas, asegurando estabilidad y calidad en entornos críticos.</li>
+                                
+                                
+                                <li><strong>Gestión operativa y soporte avanzado:</strong> Administraba entornos corporativos, comunicaciones y servicios internos, colaborando en herramientas empresariales y en la resolución de incidencias de forma proactiva.</li>
+                                
+                                
+                                <li><strong>Stack tecnológico gestionado:</strong> Sistemas SGI Solaris/Unix y Windows Server/IIS; bases de datos Oracle y SQL Server; MS Exchange, Terminal Server, Navision; firewalls CheckPoint (FW/VPN); backups; MS Streaming Servers, Cicero, C-nario; scripting con AWK, Perl, Batch y Shell; desarrollo en HTML, JavaScript, Java, ASP y C/C++.</li>
+                                
+                            </ul>
+                        </div>
+                        
+                    </section>
+                    
+                    <!-- hr -->
+
+                    <section style="margin-top: 20px;">
+                        <h2 class="section-title">Habilidades y Competencias</h2>
+                        
+                        <div class="skills-and-tech-grid">
+                            
+                            <div class="skills-block">
+                                <h4>Habilidades Profesionales</h4>
+                                <ul class="exp-bullets tech-list">
+                                    
+                                    <li><strong>Gestión de Proyectos & Programas:</strong> PMO · planificación · riesgos · governance · equipos técnicos · integradores · ágiles/híbridas</li>
+                                    
+                                    <li><strong>Estrategia y visión de producto:</strong> roadmap · discovery · analítica (cohortes/funnels)</li>
+                                    
+                                    <li><strong>Tecnología & Operaciones:</strong> SaaS · arquitectura · QA · SLAs/SLOs · continuidad</li>
+                                    
+                                    <li><strong>Gestión de riesgos</strong> técnicos/operativos y dependencias complejas</li>
+                                    
+                                    <li><strong>IA aplicada</strong> y automatización para eficiencia operativa y soporte a decisiones</li>
+                                    
+                                    <li><strong>Stakeholders:</strong> CEOs · Ministerios · negociación · comunicación ejecutiva</li>
+                                    
+                                </ul>
+                            </div>
+
+                            <div class="skills-block">
+                                <h4>Competencias Técnicas</h4>
+                                <ul class="exp-bullets tech-list">
+                                    
+                                    <li><strong>IA y automatización:</strong> LLMs locales/cloud, Make, n8n, generativos, python</li>
+                                    
+                                    <li><strong>Cloud e infraestructura:</strong> AWS, Azure, virtualización (VMware, Hyper-V)</li>
+                                    
+                                    <li><strong>Sistemas:</strong> administración Windows/Linux, scripting (Bash, Powershell)</li>
+                                    
+                                    <li><strong>Bases de datos:</strong> MySQL, SQL Server, Oracle</li>
+                                    
+                                    <li><strong>Redes y seguridad:</strong> VLANs, routing, QoS, firewalls, seguridad perimetral</li>
+                                    
+                                    <li><strong>DevOps y CI/CD:</strong> Git/GitLab</li>
+                                    
+                                    <li><strong>Audiovisual:</strong> A/V profesional, TV IP, digital signage</li>
+                                    
+                                    <li><strong>Herramientas:</strong> MS Project, Jira, Confluence, Asana, Miro, Navision</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- hr -->
+                    
+                    <section style="margin-top: 20px;">
+                        <h2 class="section-title">Otros</h2>
+
+                        <div class="skills-block">
+                            <h4>Certificaciones</h4>
+                            <div class="cert-grid">
+                                
+                                <div class="cert-item">
+                                    
+                                        <a href="https://www.credly.com/badges/a3dbb48e-064a-4da1-a334-5e786500447b" target="_blank" style="color: inherit; text-decoration: none;">
+                                            PMI – Practical Application of Generative AI for Project Managers
+                                        </a>
+                                    
+                                </div>
+                                
+                                <div class="cert-item">
+                                    
+                                        Certificaciones Microsoft: 70-480 Programming in HTML5 with JavaScript and CSS3, MPN Competency Application Development for Technical, 3-848684 Azure Technical Assessment for Application.
+                                    
+                                </div>
+                                
+                                <div class="cert-item">
+                                    
+                                        ISO/IEC 15504 (33000), Advanced Digital Signage Specialist, Herta Face Recognition Integrator
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="skills-block" style="margin-top: 25px;">
+                            <h4>Intereses</h4>
+
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px;">
+                                Tecnología · IA · Running · Ciclismo
+                            </p>
+                        </div>
+
+                    </section>
+
+                </main>
             </div>
-
-            <section class="sidebar-section">
-                <h3>Contacto</h3>
-                <div class="contact-item">
-                    <span class="contact-label">Email</span>
-                    <span class="contact-value"><a href="mailto:felixmorenorobles@gmail.com">felixmorenorobles@gmail.com</a></span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-value"><a href="https://www.linkedin.com/in/felix-moreno-robles/" target="_blank">linkedin.com/in/felix-moreno-robles</a></span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label">Ubicación</span>
-                    <span class="contact-value">Madrid</span>
-                </div>
-
-            </section>
-
-            <section class="sidebar-section">
-                <h3>Formación</h3>
-                
-                <div class="education-item">
-                    <span class="education-degree">Ingeniería Superior Informática</span>
-                    <span class="education-school">
-                        Universidad Politécnica de Madrid
-                        <br>
-                        <span style="color:#bbb; font-size:0.75rem;">
-                            1997 – 2003
-                        </span>
-                    </span>
-                </div>
-                
-                <div class="education-item">
-                    <span class="education-degree">MBA – Project Management</span>
-                    <span class="education-school">
-                        Universidad de Alcalá
-                        <br>
-                        <span style="color:#bbb; font-size:0.75rem;">
-                            2015 – 2016
-                        </span>
-                    </span>
-                </div>
-                
-            </section>
-
-            <section class="sidebar-section">
-                <h3>Skills Personales</h3>
-                <ul class="skills-list">
-                    
-                    <li>Visión estratégica</li>
-                    
-                    <li>Liderazgo</li>
-                    
-                    <li>Comunicación</li>
-                    
-                    <li>Desarrollo de Negocio</li>
-                    
-                    <li>Gestión de Equipos</li>
-                    
-                    <li>Negociación</li>
-                    
-                    <li>Análisis crítico</li>
-                    
-                    <li>Resolución de conflictos</li>
-                    
-                    <li>Calidad y Excelencia</li>
-                    
-                    <li>Proactividad</li>
-                    
-                    <li>Responsabilidad</li>
-                    
-                </ul>
-            </section>
-
-            <section class="sidebar-section">
-                <h3>Idiomas</h3>
-                <div class="contact-item">
-                    
-                    <div class="lang-item"><span>Inglés</span> <strong>B2</strong></div>
-                    
-                </div>
-            </section>
-        </aside>
-
-        <main class="main-content">
-            <header>
-                <h1>Félix <span>Moreno</span></h1>
-                <p class="job-title">Senior Manager de Proyectos IT & Productos Digitales (CPO · COO)</p>
-                <p class="job-subtitle">Project/Program Senior Manager · Head of Product · Producto Digital · Operaciones · Tecnología · IT Delivery · CPO · COO · CPTO</p>
-            </header>
-
-            <section class="summary-box">
-                <div class="summary-stats">
-                    
-                    <span>+20 Años Experiencia</span>
-                    
-                    <span>Gestión Producto & Proyectos IT</span>
-                    
-                    <span>B2B / B2C - SaaS  +15Países</span>
-                    
-                </div>
-                <p class="summary-text">
-                    Gerente de Proyectos IT y Producto Digital con 20+ años liderando productos digitales, proyectos tecnológicos complejos y plataformas SaaS en entornos multinacionales.
-                </p>
-                <p class="summary-text" style="margin-top:10px;">
-                    Amplia experiencia en delivery, operaciones, PMO, gobernanza, modernización tecnológica y gestión de stakeholders ejecutivos (CEOs, CIOs, gubernamentales).
-                </p>
-                <p class="summary-text" style="margin-top:10px;">
-                    Liderazgo de equipos multidisciplinares, gestión de integradores y partners, y foco en métricas, calidad y resultados.
-                </p>
-            </section>
-
-            <section>
-                <h2 class="section-title">Experiencia Profesional</h2>
-
-                
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Head of Product (CPO)</span>
-                        <span class="exp-date">Sep.2021 – Dic.2025 · 4 años 3 meses</span>
-                    </div>
-                    <span class="exp-company">BKOOL</span>
-                    <p class="exp-desc">Dirección global de Producto y delivery del ecosistema BKOOL (Cycling, Fitness, Web SaaS). Compañía de negocio B2C. Miembro del Comité de Dirección y reporte a CEOs.</p>
-
-                    <ul class="exp-bullets">
-                        
-                        
-                        <li><strong>Liderazgo & Alcance:</strong> Lideré el equipo/área de Producto: ~10 (POs/PMs, UX/UI, QAs) + coordinación ~30 área Tecnología. Producto global: 50.000+ usuarios en 100+ países.</li>
-                        
-                        
-                        <li><strong>Responsabilidades clave:</strong> Visión, roadmap, discovery, priorización y métricas. Gobernanza de portfolio, Gestión Ciclo de Vida del Producto (PLM) y procesos de entrega. Dirección end-to-end de proyectos.</li>
-                        
-                        
-                        <li><strong>Modernización:</strong> Impulsé la estabilidad y disponibilidad de plataforma, reduciendo deuda técnica y adoptando prácticas modernas (CI/CD, QA, SRE). Impulsé evoluciones arquitectónicas a microservicios y modernización en AWS.</li>
-                        
-                        
-                        <li><strong>Logros de Negocio:</strong> Nuevas webs orientadas a conversión. Avance en product analytics (retención, cohortes, funnels). Soporte InApp Purchases. Inclusión importantes mejoras en promociones y campañas, afiliación, Optimización de herramientas internas e impulso I+D/Realidad Aumentada. Participación en M&A y Due Diligence.</li>
-                        
-                        
-                        <li><strong>Stack tecnológico gestionado:</strong> Lideré la estrategia de producto y la dirección funcional de todos los equipos técnicos, gestionando un stack completo por áreas: <b>Producto/Business:</b> ChartMogul, Mixpanel, Mailchimp, GTM, GA4; <b>DevOps/Sistemas:</b> Sentry, GitLab CI/CD, Terraform, Docker; <b>Simulador:</b> Unity, C#; <b>Backend:</b> Java, AWS, arquitectura de microservicios y patrones event-driven, MySQL, Redis, MongoDB, Python; <b>Movilidad nativa:</b> React Native, iOS/Swift y Android/Kotlin; y <b>Web/SaaS:</b> PHP/Laravel, Node, Strapi, Next.js, React/ bajo enfoque Jamstack.</li>
-                        
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Jefe de Operaciones & Producto (COO)</span>
-                        <span class="exp-date">Ene.2006 – Sep.2021 · 15 años 9 meses</span>
-                    </div>
-                    <span class="exp-company">Xtream/Coregrid</span>
-                    <p class="exp-desc"><b>Dirección integral del área de operaciones, producto y soporte</b>, gestionando plataformas críticas en 15+ países (justicia, seguridad, AAPP, telecomunicaciones). Responsable de la ejecución de proyectos llave en mano, mantenimiento global y continuidad de negocio. Reporte a CEO.</p>
-
-                    <ul class="exp-bullets">
-                        
-                        
-                        <li><strong>Gestión de Proyectos:</strong> Dirigí implantaciones end-to-end y proyectos tecnológicos de alta complejidad, coordinando equipos multiculturales, múltiples integradores y una amplia cartera de clientes institucionales y corporativos. Gestioné SLAs, KPIs operativos, incidencias críticas y despliegues masivos en entornos de misión crítica, abarcando justicia, archivo audiovisual, seguridad integral, TV IP y señalización digital, así como soluciones audiovisuales y proyectos especializados en ámbitos públicos y privados.</li>
-                        
-                        
-                        <li><strong>Portfolio de Producto & Arquitectura:</strong> Gestioné el portfolio completo de producto (Justicia – Cicero/eFidelius, Audiovisual – Mediabox/Xcriba, Seguridad – Broadview, digital signage, TV IP), definiendo roadmap, requisitos, diseño funcional y arquitectura de referencia. Lideré la adaptación del producto para distintos países y clientes institucionales.</li>
-                        
-                        
-                        <li><strong>Relaciones Ejecutivas & Estrategia:</strong> Interlocución directa con Ministerios, Parlamentos, Poderes Judiciales, Gobiernos regionales y alta dirección. Responsable de gobernanza tecnológica, estándares de calidad y procesos ISO/IEC.</li>
-                        
-                        
-                        <li><strong>Clientes y Organismos Clave:</strong> Experiencia desplegando soluciones en una amplia red de administraciones y entidades, incluyendo Ministerios y Poderes Judiciales (España y +15 países), Congreso de los Diputados, Asamblea Portuguesa, otros Parlamentos y Ayuntamientos, así como organismos estratégicos como AENA, DGT, CNI, Embajadas e Instituciones Penitenciarias, además de múltiples entidades del ámbito audiovisual, cultural y universitario.</li>
-                        
-                        
-                        <li><strong>Experiencia destacada en Justicia:</strong> Lideré y llevé a éxito implantaciones estatales y nacionales de sistemas de grabación judicial y archivo audiovisual, definiendo arquitecturas complejas (CPD, sedes y miles de salas), adaptando <b>Cicero/eFidelius</b> y sus subsistemas (kioskos, portales internos y ciudadanos) e integrándolos con sistemas de gestión procesal, coordinando requisitos, equipos y despliegues internacionales de alto impacto para Ministerios y Poderes Judiciales en más de 15 países.</li>
-                        
-                        
-                        <li><strong>Stack tecnológico gestionado:</strong> Lideré técnicamente infraestructura y sistemas: redes, sistemas operativos, Active Directory, servidores/cabinas/storages físicos y virtualizados (Azure, VMWare, VirtualBox, Hyper-V), gestión de backups (ARCserve/Veritas), servidores de aplicaciones (JBoss, weblogic) y streaming/video servers (Wowza, Helix, Nginx); y lideré funcionalmente a los equipos de desarrollo, con stack principal: Java, Delphi, SQL Server, MySQL y Oracle.</li>
-                        
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <span class="exp-role">Coordinador de Proyectos Audiovisuales & TI</span>
-                        <span class="exp-date">Nov.2003 – Ene.2006 · 2 años 3 meses</span>
-                    </div>
-                    <span class="exp-company">VITELSA</span>
-                    <p class="exp-desc">Liderazgo de equipos, migraciones masivas, coordinación de proyectos audiovisuales y tecnológicos en entornos críticos: justicia, DGT, universidades, AAPP.</p>
-
-                    <ul class="exp-bullets">
-                        
-                        
-                        <li><strong>Coordinación de proyectos y despliegues:</strong> Coordinaba proyectos audiovisuales y de TI para AAPP y clientes corporativos, gestionando planificación, despliegues masivos, entregas y documentación.</li>
-                        
-                        
-                        <li><strong>Integración y puesta en marcha técnica:</strong> Lideraba tareas de integración, simulaciones, pruebas y puesta en marcha de nuevos sistemas, asegurando estabilidad y calidad en entornos críticos.</li>
-                        
-                        
-                        <li><strong>Gestión operativa y soporte avanzado:</strong> Administraba entornos corporativos, comunicaciones y servicios internos, colaborando en herramientas empresariales y en la resolución de incidencias de forma proactiva.</li>
-                        
-                        
-                        <li><strong>Stack tecnológico gestionado:</strong> Sistemas SGI Solaris/Unix y Windows Server/IIS; bases de datos Oracle y SQL Server; MS Exchange, Terminal Server, Navision; firewalls CheckPoint (FW/VPN); backups; MS Streaming Servers, Cicero, C-nario; scripting con AWK, Perl, Batch y Shell; desarrollo en HTML, JavaScript, Java, ASP y C/C++.</li>
-                        
-                    </ul>
-                </div>
-                
-            </section>
-            
-            <!-- hr -->
-
-            <section style="margin-top: 20px;">
-                <h2 class="section-title">Habilidades y Competencias</h2>
-                
-                <div class="skills-and-tech-grid">
-                    
-                    <div class="skills-block">
-                        <h4>Habilidades Profesionales</h4>
-                        <ul class="exp-bullets tech-list">
-                            
-                            <li><strong>Gestión de Proyectos & Programas:</strong> PMO · planificación · riesgos · governance · equipos técnicos · integradores · ágiles/híbridas</li>
-                            
-                            <li><strong>Estrategia y visión de producto:</strong> roadmap · discovery · analítica (cohortes/funnels)</li>
-                            
-                            <li><strong>Tecnología & Operaciones:</strong> SaaS · arquitectura · QA · SLAs/SLOs · continuidad</li>
-                            
-                            <li><strong>Gestión de riesgos</strong> técnicos/operativos y dependencias complejas</li>
-                            
-                            <li><strong>IA aplicada</strong> y automatización para eficiencia operativa y soporte a decisiones</li>
-                            
-                            <li><strong>Stakeholders:</strong> CEOs · Ministerios · negociación · comunicación ejecutiva</li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="skills-block">
-                        <h4>Competencias Técnicas</h4>
-                        <ul class="exp-bullets tech-list">
-                            
-                            <li><strong>IA y automatización:</strong> LLMs locales/cloud, Make, n8n, generativos, python</li>
-                            
-                            <li><strong>Cloud e infraestructura:</strong> AWS, Azure, virtualización (VMware, Hyper-V)</li>
-                            
-                            <li><strong>Sistemas:</strong> administración Windows/Linux, scripting (Bash, Powershell)</li>
-                            
-                            <li><strong>Bases de datos:</strong> MySQL, SQL Server, Oracle</li>
-                            
-                            <li><strong>Redes y seguridad:</strong> VLANs, routing, QoS, firewalls, seguridad perimetral</li>
-                            
-                            <li><strong>DevOps y CI/CD:</strong> Git/GitLab</li>
-                            
-                            <li><strong>Audiovisual:</strong> A/V profesional, TV IP, digital signage</li>
-                            
-                            <li><strong>Herramientas:</strong> MS Project, Jira, Confluence, Asana, Miro, Navision</li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- hr -->
-            
-            <section style="margin-top: 20px;">
-                <h2 class="section-title">Otros</h2>
-
-                <div class="skills-block">
-                    <h4>Certificaciones</h4>
-                    <div class="cert-grid">
-                        
-                        <div class="cert-item">
-                            
-                                <a href="https://www.credly.com/badges/a3dbb48e-064a-4da1-a334-5e786500447b" target="_blank" style="color: inherit; text-decoration: none;">
-                                    PMI – Practical Application of Generative AI for Project Managers
-                                </a>
-                            
-                        </div>
-                        
-                        <div class="cert-item">
-                            
-                                Certificaciones Microsoft: 70-480 Programming in HTML5 with JavaScript and CSS3, MPN Competency Application Development for Technical, 3-848684 Azure Technical Assessment for Application.
-                            
-                        </div>
-                        
-                        <div class="cert-item">
-                            
-                                ISO/IEC 15504 (33000), Advanced Digital Signage Specialist, Herta Face Recognition Integrator
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="skills-block" style="margin-top: 25px;">
-                    <h4>Intereses</h4>
-
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 5px;">
-                        Tecnología · IA · Running · Ciclismo
-                    </p>
-                </div>
-
-            </section>
-
-        </main>
-    </div>
-
-</body>
-</html>
+        </div>
+    </body>
+    </html>
