@@ -431,6 +431,12 @@
             /* --- RESPONSIVE: Versión móvil con nombre primero y en negro --- */
             @media screen and (max-width: 768px) {                
                 
+                .controls a, .controls button {
+                    padding: 6px 8px; /* Reducción de padding de 15px a 8px */
+                    margin: 0 3px;   /* Reducción de margen de 5px a 3px */
+                    font-size: 11px; /* Reducción de fuente para ahorrar espacio */
+                }
+
                 /* Ahora usamos flex y reordenamos */
                 .resume-container {
                     display: flex;
