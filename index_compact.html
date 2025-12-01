@@ -245,14 +245,35 @@ main .compact li a {
     
     body { 
         margin: 0; 
-        background: #fff; /* Aseguramos fondo blanco */
+        background: #fff; 
+        /* NECESARIO para que los navegadores impriman fondos y colores */
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
+    
     .cv { 
         border: none; 
         margin: 0; 
         padding: 0;
-        /* Reducimos el ancho máximo para usar la página completa si es necesario */
         max-width: 100%; 
+    }
+
+    /* FORZAR COLORES EN SIDEBAR */
+    .sidebar {
+        background-color: var(--sidebar-bg) !important;
+        color: var(--sidebar-text) !important;
+        
+        /* Asegurarse de mantener los colores de fondo y texto */
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Asegurar que el texto acentuado y gris se mantenga visible */
+    .sidebar h3, .stats {
+        color: var(--accent) !important;
+    }
+    .summary-box p, .intereses p, .sidebar .item span {
+        color: var(--sidebar-text) !important; /* O #e0e0e0 */
     }
 }
 </style>
