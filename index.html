@@ -52,6 +52,7 @@
 
             /* --- ESTILOS PARA CONTROLES --- */
             .controls {
+                position: relative; /* Contenedor para posicionar la bandera */
                 text-align: center;
                 padding: 10px;
                 margin-bottom: 0px; 
@@ -96,6 +97,27 @@
             .controls button:hover {
                 background-color: var(--accent-gold);
                 color: white;
+            }
+            /* Estilo para el interruptor de idioma (Bandera) */
+            .controls .lang-switch {
+                position: absolute; /* Sacarlo del flujo normal */
+                right: 20px;       /* Moverlo a la derecha */
+                top: 50%;          /* Alinear verticalmente */
+                transform: translateY(-50%);
+                
+                /* Hacerlo visualmente diferente de los botones de formato */
+                background: none;
+                border: none;
+                color: var(--muted);
+                font-weight: 500;
+                padding: 0;
+                margin: 0;
+            }
+            /* Estilo del botón de idioma al estar activo/activo */
+            .controls .lang-switch:hover {
+                background: none;
+                color: var(--accent);
+                border-color: transparent;
             }
 
             /* --- LAYOUT DEL CV (ESCRITORIO) --- */
@@ -550,9 +572,14 @@
     <body>
 
         <div class="controls">
-            <a href="index.html" class="active">Normal</a>
-            <a href="index_compact.html">Compacto</a>
-            <a href="CV-Felix.Moreno.pdf" download="CV-Felix.Moreno.pdf" class="download">⬇️ PDF</a>
+            
+                <a href="index-en.html" class="lang-switch">🇬🇧 EN</a>
+
+                <a href="index.html" class="active">Normal</a>
+                <a href="index_compact.html">Compacto</a>
+                
+                <a href="CV-Felix.Moreno.pdf" download="CV-Felix.Moreno.pdf" class="download">⬇️ PDF</a>
+            
             <button onclick="window.print()">🖨️ Imprimir</button>
         </div>
 
@@ -571,7 +598,7 @@
 
                     <section class="sidebar-section">
                         <h3>Contacto</h3>
-                        
+
                         <div class="contact-item">
                             <span class="contact-label">Email</span>
                             <span class="contact-value"><a href="mailto:felixmorenorobles@gmail.com">felixmorenorobles@gmail.com</a></span>
@@ -774,7 +801,7 @@
                     <!-- hr -->
 
                     <section style="margin-top: 20px;">
-                        <h2 class="section-title">Habilidades y Competencias</h2>
+                        <h2 class="section-title">Habilidades y competencias</h2>
                         
                         <div class="skills-and-tech-grid">
                             
